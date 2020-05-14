@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lFf">
     <q-header >
       <q-toolbar >
-        <q-icon name='leak_remove' size="sm"></q-icon>
+        <a href="/"><img src="../statics/pvnl.png" style="height: 40px; max-width: 40px;"></a>
         <q-btn
           flat
           dense
@@ -22,6 +22,7 @@
         <q-breadcrumbs class="text-grey-4" active-color="white" id="breadcrumbs">
           <q-btn flat no-caps to="/"> <q-breadcrumbs-el label="Home" /> </q-btn>
           <q-btn flat no-caps to="/aboutus"> <q-breadcrumbs-el label="About Us" /> </q-btn>
+          <q-btn flat no-caps to="/activities"> <q-breadcrumbs-el label="Our Core Activities" /> </q-btn>
           <q-btn flat no-caps to="/contactus"> <q-breadcrumbs-el label="Contact Us" /> </q-btn>
         </q-breadcrumbs>
        
@@ -72,7 +73,7 @@
     </q-dialog>
 
     <q-footer>
-      <div class="text-center">
+      <div class="text-center bg-grey-10">
         <div>Copyright 2020</div>
         <div class="text-grey-6">Greysoft Technologies</div>
       </div>
@@ -135,6 +136,12 @@ export default {
         },
 
         {
+          label: 'Our Core Activities',
+          icon: 'eco',
+          to: '/activities'
+        },
+
+        {
           label: 'Contact Us',
           icon: 'eco',
           to: '/contactus'
@@ -166,4 +173,9 @@ export default {
 .q-router-link--exact-active{
   color: white !important;
 }
+
+.fixed-bottom{
+  position:absolute;
+}
+
 </style>
