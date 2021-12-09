@@ -1,105 +1,41 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header >
-      <q-toolbar >
-        <a href="/"><img src="../statics/pvnl.png" style="height: 40px; max-width: 40px;"></a>
+    <q-header elevated>
+      <q-toolbar>
         <q-btn
           flat
           dense
           round
           icon="menu"
           aria-label="Menu"
-          class="button"
-          @click="leftDrawerOpen = !leftDrawerOpen"
+          @click="toggleLeftDrawer"
         />
 
         <q-toolbar-title>
-          <span class="toolbar-title">Palm Valley NG</span> 
+          Quasar App
         </q-toolbar-title>
 
-        <q-space/>
-          
-        <q-breadcrumbs class="text-grey-4" active-color="white" id="breadcrumbs">
-          <q-btn flat no-caps to="/"> <q-breadcrumbs-el label="Home" /> </q-btn>
-          <q-btn flat no-caps to="/aboutus"> <q-breadcrumbs-el label="About Us" /> </q-btn>
-          <q-btn flat no-caps to="/activities"> <q-breadcrumbs-el label="Our Core Activities" /> </q-btn>
-          <q-btn flat no-caps to="/contactus"> <q-breadcrumbs-el label="Contact Us" /> </q-btn>
-        </q-breadcrumbs>
-       
-        <q-tabs class="text-grey-4 q-ml-md">          
-          <q-tab name="SignIn" label="Sign In" @click="inception = true"/>
-        </q-tabs>
-        
+        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
-    <q-dialog v-model="inception">
-      <q-card>
-        <q-card-section class="row">         
-            <div class="text-h6 text-weight-light text-primary">Sign In</div>
-            <q-space></q-space>
-            <q-btn flat label="x" class="text-red" v-close-popup />                
-        </q-card-section>
-
-        <q-card-section class="q-pt-none">
-          <q-input v-model="text" label="Username" style="max-width: 300px"/>
-          <q-input v-model="pass" label="Password" type="password" style="max-width: 300px"/>
-        </q-card-section>
-
-        <q-card-actions align="right" class="text-primary">          
-          <q-btn color="primary" label="Sign In" v-close-popup />
-          <q-btn outline label="Sign Up" @click="secondDialog = true" />
-        </q-card-actions>
-      </q-card>
-    </q-dialog>
-
-    <q-dialog v-model="secondDialog" persistent transition-show="scale" transition-hide="scale">
-      <q-card class="bg-white text-white" style="width: 300px">
-        <q-card-section class="row">
-          <div class="text-h6 text-weight-light text-primary">Sign Up</div>
-          <q-space></q-space>
-          <q-btn flat label="x" class="text-red" v-close-popup />
-        </q-card-section>
-
-        <q-card-section class="q-pt-none">
-          <q-input v-model="text" label="Username" style="max-width: 300px"/>
-          <q-input v-model="pass" label="Password" type="password" style="max-width: 300px"/>
-        </q-card-section>
-
-        <q-card-actions align="right" class="bg-white text-primary">
-          <q-btn color="primary" label="Save" v-close-popup />
-        </q-card-actions>
-      </q-card>
-    </q-dialog>
-
-    <q-footer>
-      <div class="text-center bg-grey-10">
-        <div>Copyright 2020</div>
-        <div class="text-grey-6">Greysoft Technologies</div>
-      </div>
-    </q-footer>
     <q-drawer
-        v-model="leftDrawerOpen"
-        :width="250"
-        overlay
-        bordered
-        content-class="bg-primary"
+      v-model="leftDrawerOpen"
+      show-if-above
+      bordered
     >
       <q-list>
-        <q-item-label header class="text-white text-h5 text-weight-light">
-          Palm Valley NG
+        <q-item-label
+          header
+        >
+          Essential Links
         </q-item-label>
 
-        <q-item class="text-grey-5" v-for="link in essentialLinks" :key="link.id" :to="link.to" exact clickable>
-          <q-item-section avatar>
-            <q-icon :name="link.icon"></q-icon>
-          </q-item-section>
-
-          <q-item-section>
-            <q-item-label>{{link.label}}</q-item-label>
-          </q-item-section>
-        </q-item>
-
+        <EssentialLink
+          v-for="link in essentialLinks"
+          :key="link.title"
+          v-bind="link"
+        />
       </q-list>
     </q-drawer>
 
@@ -110,72 +46,72 @@
 </template>
 
 <script>
+import EssentialLink from 'components/EssentialLink.vue'
 
-export default {
+const linksList = [
+  {
+    title: 'Docs',
+    caption: 'quasar.dev',
+    icon: 'school',
+    link: 'https://quasar.dev'
+  },
+  {
+    title: 'Github',
+    caption: 'github.com/quasarframework',
+    icon: 'code',
+    link: 'https://github.com/quasarframework'
+  },
+  {
+    title: 'Discord Chat Channel',
+    caption: 'chat.quasar.dev',
+    icon: 'chat',
+    link: 'https://chat.quasar.dev'
+  },
+  {
+    title: 'Forum',
+    caption: 'forum.quasar.dev',
+    icon: 'record_voice_over',
+    link: 'https://forum.quasar.dev'
+  },
+  {
+    title: 'Twitter',
+    caption: '@quasarframework',
+    icon: 'rss_feed',
+    link: 'https://twitter.quasar.dev'
+  },
+  {
+    title: 'Facebook',
+    caption: '@QuasarFramework',
+    icon: 'public',
+    link: 'https://facebook.quasar.dev'
+  },
+  {
+    title: 'Quasar Awesome',
+    caption: 'Community Quasar projects',
+    icon: 'favorite',
+    link: 'https://awesome.quasar.dev'
+  }
+];
+
+import { defineComponent, ref } from 'vue'
+
+export default defineComponent({
   name: 'MainLayout',
 
-  data () {
+  components: {
+    EssentialLink
+  },
+
+  setup () {
+    const leftDrawerOpen = ref(false)
+
     return {
-      leftDrawerOpen: false,
-      inception: false,
-      secondDialog: false,
-      text: '',
-      pass: '',
-      essentialLinks: [
-
-        {
-          label: 'Home',
-          icon: 'eco',
-          to: '/'
-        },
-
-        {
-          label: 'About Us',
-          icon: 'eco',
-          to: '/aboutus'
-        },
-
-        {
-          label: 'Our Core Activities',
-          icon: 'eco',
-          to: '/activities'
-        },
-
-        {
-          label: 'Contact Us',
-          icon: 'eco',
-          to: '/contactus'
-        },
-      ], 
-
+      essentialLinks: linksList,
+      leftDrawerOpen,
+      toggleLeftDrawer () {
+        leftDrawerOpen.value = !leftDrawerOpen.value
+      }
     }
   }
-}
+})
 </script>
-
-<style scoped>
-@media (min-width: 600px){
-  .button{
-    display: none
-  }
-}
-
-@media (max-width: 600px){
-  #breadcrumbs{
-    display: none
-  }
-
-  .toolbar-title{
-    display: none
-  }
-}
-
-.q-router-link--exact-active{
-  color: white !important;
-}
-
-.fixed-bottom{
-  position:absolute;
-}
-
-</style>
