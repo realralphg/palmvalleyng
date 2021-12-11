@@ -6,7 +6,13 @@
                 <img src="../assets/img/palm_logo.png">
               </q-avatar>
             <ul class="flex">
-              <li v-for="(link, index) in essentialLinks" :key="index"><a href="/"  class="text-green font-medium px-4">{{link.title}}</a></li>
+              <li v-for="(link, index) in essentialLinks" :key="index" class="text-green font-medium px-4">
+              <router-link
+      :to="{ 'path': link.link }"
+     
+    >
+      {{link.title}}
+    </router-link></li>
             </ul>
             <ul class="flex">
               <li class="sigin_btn mr-2 px-4 text-green border border-green rounded font-medium p-2">Sign In</li>
@@ -33,13 +39,13 @@ const linksList = [
     title: 'Home',
     caption: 'quasar.dev',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: '/'
   },
   {
     title: 'About Us',
     caption: 'github.com/quasarframework',
     icon: 'code',
-    link: 'https://github.com/quasarframework'
+    link: '/company/about-us'
   },
   {
     title: 'Our Core Activites',
