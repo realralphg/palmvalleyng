@@ -6,11 +6,11 @@
                 <img src="../assets/img/palm_logo.png">
               </q-avatar>
             <ul class="flex">
-              <li v-for="(link, index) in essentialLinks" :key="index"><a href="/"  class="text-green-600 font-medium px-4">{{link.title}}</a></li>
+              <li v-for="(link, index) in essentialLinks" :key="index"><a href="/"  class="text-green font-medium px-4">{{link.title}}</a></li>
             </ul>
             <ul class="flex">
-              <li class="sigin_btn mr-2 px-4 text-green-600 border border-green-600 rounded font-medium p-2">Sign In</li>
-              <li class="register_btn mr-2 px-6 bg-yellow-400 rounded text-black font-medium p-2">Register</li>
+              <li class="sigin_btn mr-2 px-4 text-green border border-green rounded font-medium p-2">Sign In</li>
+              <li class="register_btn mr-2 px-6 bg-yellow rounded text-black font-medium p-2">Register</li>
             </ul>
       </div>
     </q-header>

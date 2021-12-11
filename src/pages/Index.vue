@@ -3,7 +3,7 @@
     <div class="wrapper">
     <div class="flex justify-evenly my-10 main_center flex-center">
       <div class="desc_container">
-        <h1 class="text-5xl text-green-800 poppins mb-4 font-extrabold">
+        <h1 class="text-5xl text-green poppins mb-4 font-extrabold">
           Palm Valley <span class="text-yellow-500 poppins px-4">NG</span>
         </h1>
         <p class="text-lg my-4">
@@ -51,7 +51,7 @@
         <img src="../assets/img/group.png" />
       </div>
       <div class="desc_container">
-        <p class="text-xl identity text-green-800 mb-4 font-extrabold">
+        <p class="text-xl identity text-green mb-4 font-extrabold">
           Our <span class="text-yellow-500">Identity</span>
         </p>
         <p class="text-lg my-4">
