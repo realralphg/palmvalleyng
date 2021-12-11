@@ -11,9 +11,10 @@
 }
 
 .world_bg {
-    height: 100vh;
+    height: 70vh;
     background: url('/img/world.png');
     background-size: 768px;
+    padding: 1em 0;
     background-repeat: no-repeat;
     background-position: right;
 }
@@ -21,6 +22,7 @@
 .wrapper {
     max-width: 1334px;
     margin: 0 auto;
+    width: 90%;
 }
 
 .breadcrumb {
