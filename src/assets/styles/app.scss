@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&family=Work+Sans:wght@100;200;300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.poppins {
+    font-family: 'poppins', sans-serif;
+}
+
+.world_bg {
+    height: 70vh;
+    background: url('/img/world.png');
+    background-size: 768px;
+    padding: 1em 0;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.wrapper {
+    max-width: 1334px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.breadcrumb {
+    height: 20em;
+    background: url('/img/bread-crumb.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-position: right;
+}

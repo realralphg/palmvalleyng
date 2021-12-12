@@ -8,3 +8,7 @@ export default defineComponent({
   name: 'App'
 })
 </script>
+<style lang="scss">
+@import "./assets/styles/app.scss";
+</style>
+
