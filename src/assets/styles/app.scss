@@ -25,6 +25,14 @@
     width: 90%;
 }
 
+footer {
+    background: url('/img/footer_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #054f05bd;
+    background-blend-mode: darken;
+}
+
 .breadcrumb {
     height: 20em;
     background: url('/img/bread-crumb.png');
