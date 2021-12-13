@@ -3,7 +3,7 @@
     <div class="wrapper">
       <div v-for="(activity, index) in activities" :key="index" :class="activity.flexDirection" class="flex justify-evenly my-10 main_center flex-center">
         <div class="desc_container">
-          <div class="text-2xl text-green poppins mb-4 font-semibold" v-html="activity.title">
+          <div class="text-2xl text-green relative poppins mb-4 under_after font-semibold" v-html="activity.title">
             
           </div>
           <p class="text-lg my-4">
@@ -67,5 +67,16 @@ const activities = ref([
 </script>
 
 <style lang="scss" scoped>
-
+.under_after::after {
+    content: "";
+    width: 20%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    border-radius: .2em;
+    background-color: #FFD600;
+    // margin: .5em 0;k
+}
 </style>

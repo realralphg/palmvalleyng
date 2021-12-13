@@ -195,11 +195,11 @@
                 text-gray-500
                 
                 mr-2
-                p-2
+                p-3
                 bg-white
               "
             />
-            <button class="bg-yellow p-2 px-4 rounded-full text-black shadow">Submit</button>
+            <button class="bg-yellow p-3 px-4 rounded-full my-1 text-black shadow">Submit</button>
           </form>
         </div>
         <div></div>
