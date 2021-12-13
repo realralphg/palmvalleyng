@@ -54,11 +54,11 @@
     <footer class="py-6 text-white">
       <!-- <p class="text-red-500">This is the footer</p> -->
       <div
-        class="wrapper flex-col flex sm:grid grid-cols-3 gap-10 justify-between"
+        class="wrapper flex-col text-lg flex sm:grid grid-cols-3 gap-10 justify-between"
       >
         <div>
           <div class="flex my-2 mb-4 items-center">
-            <q-avatar class="bg-green w-12 h-12">
+            <q-avatar class=" w-12 h-12">
               <img src="../assets/img/palm_logo.png" />
             </q-avatar>
             <p class="px-2 font-semibold text-lg poppins">Palm Valley Ng</p>
@@ -148,7 +148,7 @@
                 />
               </svg>
             </div>
-            <span class="px-2 font-semibold text-lg poppins">Address</span>
+            <span class="px-2 font-semibold text-xl poppins">Address</span>
           </div>
           <ul>
             <li class="mb-1">
@@ -179,7 +179,7 @@
           </ul>
         </div>
         <div>
-          <p class="font-semibold poppins text-lg mb-4">Our Newsletter</p>
+          <p class="font-semibold poppins text-xl mb-4">Our Newsletter</p>
           <p class="my-4">
             Sign up now to get daily latest news & updates from us
           </p>

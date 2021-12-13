@@ -29,14 +29,15 @@ footer {
     background: url('/img/footer_bg.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #054f05bd;
+    background-color: #032b03c6;
     background-blend-mode: darken;
 }
 
 .breadcrumb {
     height: 20em;
-    background: url('/img/bread-crumb.png');
+    background: url('/img/breadcrumb_bg.png');
     background-size: cover;
     background-repeat: no-repeat;
-    // background-position: right;
+    background-color: #054f05bd;
+    background-blend-mode: darken;
 }
