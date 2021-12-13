@@ -17,6 +17,12 @@ const data = [{
 }, {
     title: 'Our core Activities',
     description: 'Providing agricultural solutions to an oil dependent Nigeria.'
+},{
+    title: 'Partnership with Agribusiness Clusters',
+    description: 'Providing business support services to the following agribusiness clusters and Cooperative associations.'
+}, {
+    title: 'Our Businesses',
+    description: 'Palm Valley Nigeria is a household name in Agribusiness Support Service provision in Nigeria'
 }]
 const selectBreadCrumb = computed(() => {
     const route = useRoute()

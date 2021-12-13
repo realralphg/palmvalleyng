@@ -66,7 +66,7 @@ const activities = ref([
 ])
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .under_after::after {
     content: "";
     width: 20%;

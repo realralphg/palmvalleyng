@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header class="bg-white no-shadow p-2" elevated>
+    <q-header class="bg-white text-base border-b no-shadow p-2" reveal :reveal-offset="500">
       <div class="wrapper flex justify-between items-center">
         <q-avatar class="bg-green w-12 h-12">
           <img src="../assets/img/palm_logo.png" />
@@ -9,16 +9,26 @@
           <li
             v-for="(link, index) in essentialLinks"
             :key="index"
-            class="text-green font-medium px-4"
+            class="li_dropdown_link text-gray-600 font-medium p-2 px-4 relative"
           >
             <router-link :to="{ path: link.link }">
               {{ link.title }}
             </router-link>
+            <ul v-if="link.sublink" class="absolute top-2 mt-7 left-3 li_dropdown_container  rounded sm:w-40 divide-y z-10 border bg-white shadow">
+            <li class="p-2 px-4 cursor-default" v-for="(sublink, i) in link.sublink" :key="i"><router-link :to="{ path: sublink.link }">
+              {{ sublink.title }}
+            </router-link></li>
+            <!-- <li class="p-2 px-4 cursor-default">Our Partnership</li> -->
+            <!-- <div class></div> -->  
+          </ul>
           </li>
+
         </ul>
         <ul class="flex">
           <li
-            class="
+            
+          >
+           <q-btn flat  class="
               sigin_btn
               mr-2
               px-4
@@ -27,12 +37,15 @@
               rounded
               font-medium
               p-2
-            "
-          >
-            Sign In
+            ">
+             Sign In
+           </q-btn>
+            
           </li>
           <li
-            class="
+            
+          >
+          <q-btn flat  class="
               register_btn
               mr-2
               px-6
@@ -41,9 +54,10 @@
               text-black
               font-medium
               p-2
-            "
-          >
+            ">
             Register
+          </q-btn>
+            
           </li>
         </ul>
       </div>
@@ -51,7 +65,7 @@
     <q-page-container>
       <router-view />
     </q-page-container>
-    <footer class="py-6 text-white">
+    <footer class="py-6 mt-4 pt-10 text-white">
       <!-- <p class="text-red-500">This is the footer</p> -->
       <div
         class="wrapper flex-col text-lg flex sm:grid grid-cols-3 gap-10 justify-between"
@@ -199,7 +213,7 @@
                 bg-white
               "
             />
-            <button class="bg-yellow p-3 px-4 rounded-full my-1 text-black shadow">Submit</button>
+            <button class="bg-yellow p-3 px-4 rounded my-1 text-black shadow">Submit</button>
           </form>
         </div>
         <div></div>
@@ -210,6 +224,14 @@
 <style lang="scss">
 li.links {
   color: green;
+}
+.li_dropdown_container {
+  display: none;
+}
+.li_dropdown_link:hover {
+  .li_dropdown_container {
+    display: block;
+  }
 }
 </style>
 
@@ -228,6 +250,17 @@ const linksList = [
     caption: "github.com/quasarframework",
     icon: "code",
     link: "/company/about-us",
+    sublink: [{
+      title: "Our Businesses",
+      caption: "github.com/quasarframework",
+      icon: "code",
+      link: "/company/businesses",
+    },{
+      title: "Partnership",
+      caption: "github.com/quasarframework",
+      icon: "code",
+      link: "/company/partnership",
+    }]
   },
   {
     title: "Our Core Activites",
