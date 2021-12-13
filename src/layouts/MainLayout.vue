@@ -51,7 +51,7 @@ const linksList = [
     title: 'Our Core Activites',
     caption: 'chat.quasar.dev',
     icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    link: '/company/activities'
   },
   {
     title: 'Contact Us',
