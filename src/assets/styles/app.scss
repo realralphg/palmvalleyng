@@ -19,16 +19,29 @@
     background-position: right;
 }
 
+.bg_btn {
+    background: linear-gradient(110.24deg, #448b42 36.53%, #05bd01 115.27%);
+}
+
 .wrapper {
     max-width: 1334px;
     margin: 0 auto;
     width: 90%;
 }
 
-.breadcrumb {
-    height: 20em;
-    background: url('/img/bread-crumb.png');
+footer {
+    background: url('/img/footer_bg.png');
     background-size: cover;
     background-repeat: no-repeat;
-    // background-position: right;
+    background-color: #032b03c6;
+    background-blend-mode: darken;
+}
+
+.breadcrumb {
+    height: 20em;
+    background: url('/img/breadcrumb_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #054f05bd;
+    background-blend-mode: darken;
 }

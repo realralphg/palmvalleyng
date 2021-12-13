@@ -1,5 +1,7 @@
 import Company from '../pages/Company.vue';
-import AboutUs from '../pages/AboutUs.vue'
+import AboutUs from '../pages/AboutUs.vue';
+import Activities from '../pages/Activities.vue'
+import Businesses from '../pages/Businesses.vue'
 const routes = [{
         path: '/',
         component: () =>
@@ -14,6 +16,12 @@ const routes = [{
             children: [{
                 path: 'about-us',
                 component: AboutUs
+            }, {
+                path: 'activities',
+                component: Activities
+            }, {
+                path: 'businesses',
+                component: Businesses
             }]
         }, ]
     },
