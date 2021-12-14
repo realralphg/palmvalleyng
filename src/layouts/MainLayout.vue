@@ -14,7 +14,7 @@
             <router-link :to="{ path: link.link }">
               {{ link.title }}
             </router-link>
-            <ul v-if="link.sublink" class="absolute top-2 mt-7 left-3 li_dropdown_container  rounded sm:w-40 divide-y z-10 border bg-white shadow">
+            <ul v-if="link.sublink" class="absolute top-2 mt-7 left-3 li_dropdown_container  rounded sm:w-40 text-sm divide-y z-10 border bg-white shadow">
             <li class="p-2 px-4 cursor-default" v-for="(sublink, i) in link.sublink" :key="i"><router-link :to="{ path: sublink.link }">
               {{ sublink.title }}
             </router-link></li>
@@ -246,11 +246,15 @@ const linksList = [
     link: "/",
   },
   {
-    title: "About Us",
+    title: "Company",
     caption: "github.com/quasarframework",
     icon: "code",
     link: "/company/about-us",
     sublink: [{
+    title: "About Us",
+    caption: "github.com/quasarframework",
+    icon: "code",
+    link: "/company/about-us"},{
       title: "Our Businesses",
       caption: "github.com/quasarframework",
       icon: "code",

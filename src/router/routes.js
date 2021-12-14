@@ -2,6 +2,7 @@ import Company from '../pages/Company.vue';
 import AboutUs from '../pages/AboutUs.vue';
 import Activities from '../pages/Activities.vue'
 import Businesses from '../pages/Businesses.vue'
+import Partnership from '../pages/Partnership.vue'
 const routes = [{
         path: '/',
         component: () =>
@@ -22,6 +23,9 @@ const routes = [{
             }, {
                 path: 'businesses',
                 component: Businesses
+            }, {
+                path: 'partnership',
+                component: Partnership
             }]
         }, ]
     },
