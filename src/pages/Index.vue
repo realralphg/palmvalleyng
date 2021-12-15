@@ -1,8 +1,8 @@
 <template>
   <q-page>
     <div class="wrapper">
-      <div class="flex justify-evenly my-10 main_center flex-center">
-        <div class="relative mb-40 sm:order-last">
+      <div class="flex justify-evenly md:flex-nowrap my-10 main_center flex-center">
+        <div class="relative mb-40 md:order-last">
           <div class=" big border shadow-lg rounded">
             <img class="transition ease-in-out delay-150  overflow-hidden shadow-md rounded transform hover:-translate-y-2" :src="bigImg"/>
           </div>
@@ -53,11 +53,11 @@
         </div>
         
       </div>
-      <div class="flex justify-evenly flex-center">
+      <div class="flex justify-evenly  md:flex-nowrap my-10 gap-10  flex-center">
         <div class="img_container">
           <img src="../assets/img/group.png" />
         </div>
-        <div class="desc_container">
+        <div class="desc_container my-5">
           <p class="text-2xl text-green relative poppins mb-4 under_after font-semibold">
             Our <span class="text-yellow-500">Identity</span>
           </p>
@@ -107,10 +107,9 @@
         class="
           wrapper
           flex
-          xs:grid
-          grid-cols-3
-          gap-10
-          sm:h-full
+         
+           gap-10
+          py-10
           justify-evenly
           items-center
           flex-wrap

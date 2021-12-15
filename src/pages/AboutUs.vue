@@ -2,8 +2,8 @@
   <q-page>
     <div class="wrapper">
       <div class="flex justify-evenly my-10 main_center flex-center">
-        <div class="desc_container">
-          <div class="text-2xl text-green relative poppins mb-4 under_after font-semibold">
+        <div class="desc_container my-5">
+          <div class="text-2xl  text-green relative poppins mb-4 under_after font-semibold">
             Incorporation
           </div>
           <p class="text-lg my-4">
@@ -50,16 +50,16 @@
             </div>
           </button>
         </div>
-        <div class="img_container">
+        <div class="img_container overflow-hidden rounded-md shadow-lg">
           <img src="../assets/img/aboutUs.png" />
         </div>
       </div>
       <div class="flex justify-evenly flex-center">
-        <div class="img_container">
+        <div class="img_container overflow-hidden rounded-md shadow-lg">
           <img src="../assets/img/group.png" />
         </div>
-        <div class="desc_container">
-          <p class="text-2xl text-green relative poppins mb-4 under_after font-semibold">
+        <div class="desc_container my-5">
+          <p class="text-2xl  text-green relative poppins mb-4 under_after font-semibold">
             One-step-shop
           </p>
           <p class="text-lg my-4">
@@ -106,8 +106,12 @@
         </div>
       </div>
       <div class="flex justify-evenly my-10 main_center flex-center">
-        <div class="desc_container">
-          <div class="text-2xl text-green relative poppins mb-4 under_after font-semibold">
+        
+        <div class="img_container sm:order-last overflow-hidden rounded-md shadow-lg">
+          <img src="../assets/img/man.png" />
+        </div>
+        <div class="desc_container  my-5">
+          <div class="text-2xl  text-green relative poppins mb-4 under_after font-semibold">
             Our Core Activities
           </div>
           <p class="text-lg my-4">
@@ -152,9 +156,6 @@
               </svg>
             </div>
           </q-btn>
-        </div>
-        <div class="img_container">
-          <img src="../assets/img/man.png" />
         </div>
       </div>
     </div>
