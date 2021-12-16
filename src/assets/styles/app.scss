@@ -11,16 +11,31 @@
 }
 
 .world_bg {
-    height: 70vh;
     background: url('/img/world.png');
     background-size: 768px;
-    padding: 1em 0;
+    padding: 5em 0;
     background-repeat: no-repeat;
     background-position: right;
 }
 
 .bg_btn {
     background: linear-gradient(110.24deg, #448b42 36.53%, #05bd01 115.27%);
+}
+
+.menu_btn {
+    background-image: url('/img/menu_btn.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.close_btn {
+    background-image: url('/img/close_btn.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
 }
 
 .wrapper {

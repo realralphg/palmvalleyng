@@ -1,7 +1,16 @@
 <template>
   <q-page>
     <div class="wrapper">
-      <div class="flex justify-evenly my-10 main_center flex-center">
+      <div class="flex justify-evenly md:flex-nowrap my-10 main_center flex-center">
+        <div class="relative mb-40 md:order-last">
+          <div class=" big border shadow-lg rounded">
+            <img class="transition ease-in-out delay-150  overflow-hidden shadow-md rounded transform hover:-translate-y-2" :src="bigImg"/>
+          </div>
+          <div class="small_img_container ">
+            <div v-for="(img, index) in images" :key="index" @click="switchImg(index)" class="small_img transition ease-in-out delay-150  overflow-hidden shadow-md rounded transform hover:-translate-y-2"><img :src="img" /></div>
+          </div>
+          
+        </div>
         <div class="desc_container">
           <h1 class="text-5xl poppins mb-4 font-extrabold">
             Palm Valley <span class="text-green poppins px-4">NG</span>
@@ -42,15 +51,13 @@
             </div>
           </q-btn>
         </div>
-        <div class="img_container">
-          <img src="../assets/img/girls.png" />
-        </div>
+        
       </div>
-      <div class="flex justify-evenly flex-center">
+      <div class="flex justify-evenly  md:flex-nowrap my-10 gap-10  flex-center">
         <div class="img_container">
           <img src="../assets/img/group.png" />
         </div>
-        <div class="desc_container">
+        <div class="desc_container my-5">
           <p class="text-2xl text-green relative poppins mb-4 under_after font-semibold">
             Our <span class="text-yellow-500">Identity</span>
           </p>
@@ -100,10 +107,9 @@
         class="
           wrapper
           flex
-          xs:grid
-          grid-cols-3
-          gap-10
-          sm:h-full
+         
+           gap-10
+          py-10
           justify-evenly
           items-center
           flex-wrap
@@ -173,23 +179,72 @@
         </div>
       </div>
     </div>
-    <div>
-      
-    </div>
+    
+        
+    
+    <div></div>
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref, reactive } from "vue";
 
 export default defineComponent({
   name: "PageIndex",
+  setup() {
+    const bigImg = ref('/img/img1.png')
+    const images = reactive([
+    '/img/img2.png','/img/img3.png'
+  ])
+  const switchImg = (index) => {
+    const bigImgSamp = bigImg.value
+    bigImg.value = images[index];
+    images[index] = bigImgSamp
+  }
+  return {
+    bigImg,
+    images,
+    switchImg
+  }
+  }
+  
 });
 </script>
 <style lang="scss">
 .services_card {
   height: 12em;
   max-width: 28em;
+}
+.big {
+  // max-width: 25em;
+  max-width: 28em;
+    height: 26em;
+    z-index: 2;
+    width: 100%;
+    background-size: cover;
+  img {
+    width: 100%;
+  }
+}
+.big:hover {
+  z-index: 4
+}
+.small_img_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  z-index: 2;
+.small_img {
+  
+  max-width: 12em;
+   img {
+     width: 100%
+   }
+}
 }
 .main_center {
   margin: 7em 0;

@@ -35,6 +35,12 @@ const selectBreadCrumb = computed(() => {
         case '/company/activities':
             obj = data[2];
             break;
+            case '/company/businesses':
+            obj = data[4];
+            break;
+            case '/company/partnership':
+            obj = data[3];
+            break;
         default :
             obj = data[0]
             // break;

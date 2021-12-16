@@ -19,7 +19,7 @@
           </p>
           
         </div>
-        <div class="img_container">
+        <div class="img_container border rounded overflow-hidden shadow-lg">
           <img :src="'./img/' + activity.img + '.png'" />
         </div>
       </div>
