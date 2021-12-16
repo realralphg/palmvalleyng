@@ -50,14 +50,20 @@
             </div>
           </button>
         </div>
-        <div class="img_container overflow-hidden rounded-md shadow-lg">
-          <img src="../assets/img/aboutUs.png" />
-        </div>
+         <q-img
+              src="../assets/img/aboutUs.png"
+              spinner-color="primary"
+              spinner-size="82px"
+              class="img_container overflow-hidden rounded-md shadow-lg"
+            />
       </div>
       <div class="flex justify-evenly flex-center">
-        <div class="img_container overflow-hidden rounded-md shadow-lg">
-          <img src="../assets/img/group.png" />
-        </div>
+        <q-img
+              src="../assets/img/group.png"
+              spinner-color="primary"
+              spinner-size="82px"
+              class="img_container overflow-hidden rounded-md shadow-lg"
+            />
         <div class="desc_container my-5">
           <p class="text-2xl  text-green relative poppins mb-4 under_after font-semibold">
             One-step-shop
@@ -106,10 +112,13 @@
         </div>
       </div>
       <div class="flex justify-evenly my-10 main_center flex-center">
+         <q-img
+              src="../assets/img/man.png"
+              spinner-color="primary"
+              spinner-size="82px"
+              class="img_container overflow-hidden sm:order-last rounded-md shadow-lg"
+            />
         
-        <div class="img_container sm:order-last overflow-hidden rounded-md shadow-lg">
-          <img src="../assets/img/man.png" />
-        </div>
         <div class="desc_container  my-5">
           <div class="text-2xl  text-green relative poppins mb-4 under_after font-semibold">
             Our Core Activities

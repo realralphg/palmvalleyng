@@ -1,16 +1,38 @@
 <template>
   <q-page>
+    
     <div class="wrapper">
       <div class="flex justify-evenly md:flex-nowrap my-10 main_center flex-center">
-        <div class="relative mb-40 md:order-last">
-          <div class=" big border shadow-lg rounded">
-            <img class="transition ease-in-out delay-150  overflow-hidden shadow-md rounded transform hover:-translate-y-2" :src="bigImg"/>
-          </div>
+        <div class="big relative mb-40 md:order-last">
+          <q-img
+            no-native-menu
+              :src="bigImg"
+              spinner-color="red"
+            class="absolute-full transition relative ease-in-out border delay-150  overflow-hidden shadow-lg rounded transform hover:-translate-y-2"
+            >
+            <template v-slot:error>
+            <div class="absolute-full flex flex-center bg-negative text-white">
+              Cannot load image
+            </div>
+          </template>
+        
+          </q-img>
           <div class="small_img_container ">
-            <div v-for="(img, index) in images" :key="index" @click="switchImg(index)" class="small_img transition ease-in-out delay-150  overflow-hidden shadow-md rounded transform hover:-translate-y-2"><img :src="img" /></div>
+              <div v-for="(img, index) in images" :key="index" @click="switchImg(index)" class="small_img transition ease-in-out delay-150  overflow-hidden shadow-md rounded transform hover:-translate-y-2"><img :src="img" />
+              </div>
+            </div>
+        </div>
+        <!-- <div class="relative mb-40 md:order-last">
+           <div class=" big border shadow-lg rounded">
+            <img class="transition ease-in-out delay-150  overflow-hidden shadow-md rounded transform hover:-translate-y-2" :src="bigImg"/>
+          </div> 
+          
+          <div class="small_img_container ">
+            <div v-for="(img, index) in images" :key="index" @click="switchImg(index)" class="small_img transition ease-in-out delay-150  overflow-hidden shadow-md rounded transform hover:-translate-y-2"><img :src="img" />
+            </div>
           </div>
           
-        </div>
+        </div> -->
         <div class="desc_container">
           <h1 class="text-5xl poppins mb-4 font-extrabold">
             Palm Valley <span class="text-green poppins px-4">NG</span>
@@ -54,9 +76,15 @@
         
       </div>
       <div class="flex justify-evenly  md:flex-nowrap my-10 gap-10  flex-center">
-        <div class="img_container">
-          <img src="../assets/img/group.png" />
-        </div>
+        
+          <q-img
+              src="../assets/img/group.png"
+              spinner-color="primary"
+              spinner-size="82px"
+              class="img_container"
+            />
+          <!-- <img src="../assets/img/group.png" /> -->
+        
         <div class="desc_container my-5">
           <p class="text-2xl text-green relative poppins mb-4 under_after font-semibold">
             Our <span class="text-yellow-500">Identity</span>
@@ -240,7 +268,7 @@ export default defineComponent({
   z-index: 2;
 .small_img {
   
-  max-width: 12em;
+  max-width: 11em;
    img {
      width: 100%
    }
