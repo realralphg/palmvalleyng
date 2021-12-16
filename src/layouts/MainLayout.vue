@@ -97,15 +97,17 @@
         </ul>
         <div
           class="menu_btn"
+          @click="toggleLeftDrawer"
           aria-hidden="true"
         ></div>
       
       </div>
     </q-header>
-      <div class="mobile_menu">
+      <div :class="leftDrawerOpen ? 'active' : ''" class="mobile_menu">
         <div
-          class="close_btn absolute top-0 right-0 m-2"
+          class="close_btn absolute top-0 right-0 m-4"
           aria-hidden="true"
+           @click="toggleLeftDrawer"
         ></div>
         <div class="m-auto w-10/12">
           <ul class="flex items-center mx-auto link_list">
@@ -137,7 +139,7 @@
           </ul>
           </li>
         </ul>
-        <ul class=" flex link_list justify-center items-center gap-5 flex-col">
+        <ul class=" flex link_list mx-auto justify-center items-center gap-5 flex-col">
           <li>
             <q-btn
               flat
