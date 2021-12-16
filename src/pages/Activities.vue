@@ -19,9 +19,13 @@
           </p>
           
         </div>
-        <div class="img_container border rounded overflow-hidden shadow-lg">
-          <img :src="'./img/' + activity.img + '.png'" />
-        </div>
+         <q-img
+              :src="'./img/' + activity.img + '.png'"
+              spinner-color="primary"
+              spinner-size="82px"
+              class="img_container overflow-hidden border rounded-md shadow-lg"
+            />
+        
       </div>
     </div>
     </q-page>
