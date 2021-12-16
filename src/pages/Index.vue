@@ -52,7 +52,7 @@
               font-medium
             "
             >
-            <span>Get Started</span>
+            <span>Create a free account</span>
             <div class="ml-4">
               <svg
                 width="24"
@@ -130,7 +130,7 @@
         </div>
       </div>
     </div>
-    <div class="world_bg">
+    <div class="world_bg ">
       <div
         class="
           wrapper
@@ -143,106 +143,49 @@
           flex-wrap
         "
       >
-        <div
-          class="
-            p-4
-            shadow-xl
-            rounded-md
-            flex border border-gray-100
-            items-center
-            text-center
-            flex-col
-            justify-center
-            services_card
-            bg-white
-          "
-        >
-          
-          <p class="font-bold text-green text-xl my-2">Vision</p>
-          <p class="my-2">
-            To Provide agricultural solutions to an oil dependent Nigeria
-          </p>
-        </div>
-        <div
-          class="
-            p-4
-            shadow-xl
-            rounded-md
-            flex border border-gray-100
-            items-center
-            text-center
-            flex-col
-            justify-center
-            services_card
-            bg-white
-          "
-        >
-       
-          <p class="font-bold text-green text-xl my-2">Mission</p>
-          <p class="my-2">
-            To provide Business Support to the vulnerable group in the VC which
-            are mainly women and youth
-          </p>
-        </div>
-        <div
-          class="
-            p-4
-            shadow-xl
-            rounded-md
-            flex border border-gray-100
-            items-center
-            text-center
-            flex-col
-            justify-center
-            services_card
-            bg-white
-          "
-        >
-         
-          <p class="font-bold text-green text-xl block my-2">Core Value</p>
-          <p class="my-2">
-            Building business relationships and linkages to financial
-            institutions, input, and out markets as well as forward integration.
-          </p>
-        </div>
+        <WhoWeAre v-for ="(service, index) in services" :key="index" :service="service"/>
+        
+        
       </div>
     </div>
     
-        
-    
-    <div></div>
+    <div class="wrapper">
+        <Clients />
+    </div>
   </q-page>
 </template>
 
-<script>
-import { defineComponent, ref, reactive } from "vue";
+<script setup>
+import { ref, reactive } from "vue";
+import WhoWeAre from 'components/WhoWeAre.vue'
+import Clients from 'components/Clients.vue'
 
-export default defineComponent({
-  name: "PageIndex",
-  setup() {
     const bigImg = ref('/img/img1.png')
     const images = reactive([
     '/img/img2.png','/img/img3.png'
   ])
   const switchImg = (index) => {
-    const bigImgSamp = bigImg.value
-    bigImg.value = images[index];
+    const bigImgSamp = bigImg.value;
     images[index] = bigImgSamp
   }
-  return {
-    bigImg,
-    images,
-    switchImg
-  }
-  }
-  
-});
+  const services = ref([
+    {
+      img: '/img/Eyes.svg',
+      title: 'Vision',
+      desc: 'To Provide agricultural solutions to an oil dependent Nigeria'
+    }, {
+      img: '/img/optical.svg',
+      title: 'Mission',
+      desc: 'To provide Business Support to the vulnerable group in the VC which are mainly women and youth'
+    }, {
+      img: '/img/tilda.svg',
+      title: 'Core Value',
+      desc: ' Building business relationships and linkages to financial institutions, input, and out markets as well as forward integration.'
+    }
+  ])
 </script>
 <style lang="scss">
-.services_card {
-  height: 12em;
-  max-width: 28em;
-}
+
 .big {
   // max-width: 25em;
   max-width: 28em;

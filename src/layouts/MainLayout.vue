@@ -1,12 +1,12 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header
-      class="bg-white text-base border-b no-shadow p-2"
+      class="bg_btn text-yellow text-base border-b no-shadow py-4 p-2"
       reveal
       :reveal-offset="500"
       >
       <div class="wrapper header flex flex-nowrap justify-between items-center">
-        <q-avatar class="bg-green w-12 h-12">
+        <q-avatar class="bg-transparent w-12 h-12">
           <img src="../assets/img/palm_logo.png" />
         </q-avatar>
         <nav class="desktop_nav">
@@ -16,7 +16,7 @@
               :key="index"
               class="
                 li_dropdown_link
-                text-gray-600
+                text-yellow
                 font-medium
                 p-2
                 px-4
@@ -67,8 +67,8 @@
                 sigin_btn
                 mr-2
                 px-4
-                text-green
-                border border-green
+                text-yellow
+                border border-yellow
                 rounded
                 font-medium
                 p-2
@@ -86,7 +86,7 @@
                 px-6
                 bg-yellow
                 rounded
-                text-black
+                text-green
                 font-medium
                 p-2
               "
@@ -400,6 +400,7 @@ li.links {
 
 <script>
 // import EssentialLink from 'components/EssentialLink.vue'
+
 
 const linksList = [
   {
