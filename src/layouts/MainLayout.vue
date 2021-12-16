@@ -116,9 +116,9 @@
             :key="index"
             class="li_dropdown_link text-gray-600 flex flex-col items-center font-medium p-2 px-4 relative"
           >
-          <router-link :to="{ path: link.link }">
+          <div class="cursor-default select-none" @click="changeRoute(link.link)">
             {{ link.title }}
-          </router-link>
+          </div>
           <ul
             v-if="link.sublink"
             class="
@@ -130,9 +130,9 @@
               v-for="(sublink, i) in link.sublink"
               :key="i"
             >
-              <router-link :to="{ path: sublink.link }">
-                {{ sublink.title }}
-              </router-link>
+              <div class="cursor-default select-none" @click="changeRoute(sublink.link)">
+            {{ sublink.title }}
+          </div>
               </li>
               <!-- <li class="p-2 px-4 cursor-default">Our Partnership</li> -->
               <!-- <div class></div> -->
@@ -412,7 +412,7 @@ const linksList = [
     title: "Company",
     caption: "github.com/quasarframework",
     icon: "code",
-    link: "#",
+    link: "",
     sublink: [
       {
         title: "About Us",
@@ -449,7 +449,7 @@ const linksList = [
 ];
 
 import { defineComponent, ref } from "vue";
-
+import {useRouter} from 'vue-router'
 export default defineComponent({
   name: "MainLayout",
 
@@ -459,13 +459,19 @@ export default defineComponent({
 
   setup() {
     const leftDrawerOpen = ref(false);
-
+    const router = useRouter();
+    const toggleLeftDrawer = ()  => {
+        leftDrawerOpen.value = !leftDrawerOpen.value;
+      };
+      const changeRoute = (path) => {
+          router.push({'path': path})
+          toggleLeftDrawer()
+      };
     return {
       essentialLinks: linksList,
       leftDrawerOpen,
-      toggleLeftDrawer() {
-        leftDrawerOpen.value = !leftDrawerOpen.value;
-      },
+      toggleLeftDrawer,
+      changeRoute
     };
   },
 });
