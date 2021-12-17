@@ -2,7 +2,8 @@
   <q-page>
     
     <div class="wrapper">
-      <div class="flex justify-evenly md:flex-nowrap my-10 main_center flex-center">
+      09152351295
+      <div class="flex justify-evenly md:flex-nowrap my-10 gap-10 mt-4 main_center flex-center">
         <div class="big relative mb-40 md:order-last">
           <q-img
             no-native-menu
@@ -17,11 +18,80 @@
           </template>
         
           </q-img>
-          <div class="small_img_container ">
+          <div>
+            <div class="small_img_container ">
               <div v-for="(img, index) in images" :key="index" @click="switchImg(index)" class="small_img transition ease-in-out delay-150  overflow-hidden shadow-md rounded transform hover:-translate-y-2"><img :src="img" />
               </div>
             </div>
+            <div class="mt-20 arrow_container mb-30 flex justify-center gap-2">
+              <q-btn
+            class="
+              flex
+              justify-between
+              items-center
+              p-3 
+              rounded
+              small_btn
+              text-yellow
+              font-medium
+            "
+            >
+            
+            <div class="">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 11.7256C4 11.3459 4.28215 11.0321 4.64823 10.9824L4.75 10.9756H19.75C20.1642 10.9756 20.5 11.3114 20.5 11.7256C20.5 12.1053 20.2178 12.4191 19.8518 12.4687L19.75 12.4756L4.75 12.4756C4.33579 12.4756 4 12.1398 4 11.7256Z"
+                  fill="#FFD600"
+                />
+                <path
+                  d="M13.171 6.23271C12.8775 5.94045 12.8765 5.46558 13.1687 5.17206C13.4344 4.90522 13.851 4.88012 14.1451 5.09734L14.2294 5.16977L20.2794 11.1938C20.547 11.4603 20.5714 11.8784 20.3524 12.1724L20.2794 12.2567L14.2294 18.2817C13.9359 18.574 13.4611 18.573 13.1688 18.2795C12.9031 18.0127 12.8797 17.5959 13.0982 17.3028L13.171 17.2188L18.687 11.7249L13.171 6.23271Z"
+                  fill="#FFD600"
+                />
+              </svg>
+            </div>
+          </q-btn>
+                 <q-btn
+            class="
+              flex
+              justify-between
+              items-center
+              p-3 
+              rounded
+              small_btn
+              text-yellow
+              font-medium
+            "
+            >
+            
+            <div class="">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 11.7256C4 11.3459 4.28215 11.0321 4.64823 10.9824L4.75 10.9756H19.75C20.1642 10.9756 20.5 11.3114 20.5 11.7256C20.5 12.1053 20.2178 12.4191 19.8518 12.4687L19.75 12.4756L4.75 12.4756C4.33579 12.4756 4 12.1398 4 11.7256Z"
+                  fill="#FFD600"
+                />
+                <path
+                  d="M13.171 6.23271C12.8775 5.94045 12.8765 5.46558 13.1687 5.17206C13.4344 4.90522 13.851 4.88012 14.1451 5.09734L14.2294 5.16977L20.2794 11.1938C20.547 11.4603 20.5714 11.8784 20.3524 12.1724L20.2794 12.2567L14.2294 18.2817C13.9359 18.574 13.4611 18.573 13.1688 18.2795C12.9031 18.0127 12.8797 17.5959 13.0982 17.3028L13.171 17.2188L18.687 11.7249L13.171 6.23271Z"
+                  fill="#FFD600"
+                />
+              </svg>
+            </div>
+          </q-btn>
+              </div>
         </div>
+          </div>
+          
         <!-- <div class="relative mb-40 md:order-last">
            <div class=" big border shadow-lg rounded">
             <img class="transition ease-in-out delay-150  overflow-hidden shadow-md rounded transform hover:-translate-y-2" :src="bigImg"/>
@@ -151,14 +221,179 @@
     
     <div class="wrapper">
         <Clients />
+        <div class="max-w-3xl text-center flex flex-col gap-10 justify-center items-center mx-auto">
+          <p class="head-text text-2xl font-semibold my-4 text-green relative poppins mb-4 under_after">Measuring Impact</p>
+          <q-img :src="'/img/chart.svg'"/>
+        </div>
+    </div>
+    <div class="curved_green_bg">
+      <div class="wrapper">
+        <div class="text-center flex flex-col justify-center items-center">
+          <p class="text-2xl text-white relative poppins mb-4 under_after font-semibold">Affilation</p>
+          <p class="text-white text-lg max-w-2xl ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet,r</p>
+        </div>
+        <div>
+          <Splide :options="{
+  
+  padding: '5rem',
+  gap    : '2rem',
+  arrowPath: 'M31.7777 18.4166L17.9207 4.55963L21.5735 0.906799L41.6667 21L21.5735 41.0931L17.9207 37.4403L31.7777 23.5833H0.333344V18.4166H31.7777Z',
+  autoWidth: true,
+  classes: {
+		arrows: 'splide__arrows flex gap-5 mb-10 flex justify-center gap-2',
+		arrow : 'splide__arrow shadow-md rounded small_btn p-4',
+		prev  : 'splide__arrow--prev ',
+		next  : 'splide__arrow--next ',
+  },
+  focus  : 'center',
+  breakpoints: {
+    640: {
+      perPage: 2,
+      gap    : '.7rem',
+      
+    },
+    480: {
+      perPage: 3,
+      gap    : '.7rem',
+      type   : 'loop',
+    }}
+}">
+    <SplideSlide>
+       <Slide />
+    </SplideSlide>
+    <SplideSlide>
+       <Slide />
+    </SplideSlide>
+    <SplideSlide>
+       <Slide />
+    </SplideSlide>
+    
+  </Splide>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      
+  
+
+    </div>
+    <div class="wrapper">
+      <div class="flex flex-col justify-center text-center items-center mb-10 my-4">
+        <p class="text-2xl relative poppins mb-4 text-green under_after font-semibold">Partnership</p>
+        <p class="max-w-lg">PVNL provides business support services to the following agribusiness clusters and Cooperative associations.</p>
+      </div>
+      
+    </div>
+    <div class="transp_bg">
+      <div class="wrapper">
+        <p class="text-4xl text-white my-2 mb-10 font-semibold">Partnership with Agribusiness <br />Clusters</p>
+         <q-btn
+            class="
+              flex
+              justify-between
+              items-center
+              p-3
+              bg-white
+              rounded
+              
+              text-green
+              font-medium
+            "
+            >
+            <span>Read More</span>
+            <div class="ml-4">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 11.7256C4 11.3459 4.28215 11.0321 4.64823 10.9824L4.75 10.9756H19.75C20.1642 10.9756 20.5 11.3114 20.5 11.7256C20.5 12.1053 20.2178 12.4191 19.8518 12.4687L19.75 12.4756L4.75 12.4756C4.33579 12.4756 4 12.1398 4 11.7256Z"
+                  fill="#FFD600"
+                />
+                <path
+                  d="M13.171 6.23271C12.8775 5.94045 12.8765 5.46558 13.1687 5.17206C13.4344 4.90522 13.851 4.88012 14.1451 5.09734L14.2294 5.16977L20.2794 11.1938C20.547 11.4603 20.5714 11.8784 20.3524 12.1724L20.2794 12.2567L14.2294 18.2817C13.9359 18.574 13.4611 18.573 13.1688 18.2795C12.9031 18.0127 12.8797 17.5959 13.0982 17.3028L13.171 17.2188L18.687 11.7249L13.171 6.23271Z"
+                  fill="#FFD600"
+                />
+              </svg>
+            </div>
+          </q-btn>
+      </div>
+    </div>
+    <div>
+      <div class="wrapper">
+          <div class="flex justify-evenly my-10 main_center flex-center">
+        <div class="desc_container my-5">
+          <div class="text-2xl  text-green relative poppins mb-4 under_after font-semibold">
+            <span class="font-bold">Our</span> Businesses
+          </div>
+          <p class="my-5 text-lg font-medium">PVNL provides business support services to the following </p>
+          <p class="text-lg my-4">
+            Palm Valley Nigeria is a household name in Agribusiness Support
+            Service provision in Nigeria. We work with other private investors in 
+            the Agricultural Value Chain to form a community with like minds
+            at revolutionizing agriculture in Nigeria. 
+
+          </p>
+          <button
+            class="
+              flex
+              justify-between
+              items-center
+              p-2
+              rounded
+              bg_btn
+              text-yellow
+              font-medium
+            "
+          >
+            <span>Get Started</span>
+            <div class="ml-4">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 11.7256C4 11.3459 4.28215 11.0321 4.64823 10.9824L4.75 10.9756H19.75C20.1642 10.9756 20.5 11.3114 20.5 11.7256C20.5 12.1053 20.2178 12.4191 19.8518 12.4687L19.75 12.4756L4.75 12.4756C4.33579 12.4756 4 12.1398 4 11.7256Z"
+                  fill="#FFD600"
+                />
+                <path
+                  d="M13.171 6.23271C12.8775 5.94045 12.8765 5.46558 13.1687 5.17206C13.4344 4.90522 13.851 4.88012 14.1451 5.09734L14.2294 5.16977L20.2794 11.1938C20.547 11.4603 20.5714 11.8784 20.3524 12.1724L20.2794 12.2567L14.2294 18.2817C13.9359 18.574 13.4611 18.573 13.1688 18.2795C12.9031 18.0127 12.8797 17.5959 13.0982 17.3028L13.171 17.2188L18.687 11.7249L13.171 6.23271Z"
+                  fill="#FFD600"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+         <q-img
+              src="../assets/img/circle.png"
+              spinner-color="primary"
+              spinner-size="82px"
+              class="img_container "
+            />
+      </div>
+      </div>
+    </div>
+    <div style="background-image: url('/img/greendotsbg.png')">
+      <div class="wrapper p-4">
+          <p>Subscribe to get exciting news and <br />stories of all our works.</p>
+      </div>
     </div>
   </q-page>
 </template>
 
 <script setup>
 import { ref, reactive } from "vue";
+import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import WhoWeAre from 'components/WhoWeAre.vue'
 import Clients from 'components/Clients.vue'
+import Slide from 'components/Slide.vue'
+
 
     const bigImg = ref('/img/img1.png')
     const images = reactive([
@@ -166,6 +401,7 @@ import Clients from 'components/Clients.vue'
   ])
   const switchImg = (index) => {
     const bigImgSamp = bigImg.value;
+    bigImg.value = images[index]
     images[index] = bigImgSamp
   }
   const services = ref([
@@ -183,7 +419,23 @@ import Clients from 'components/Clients.vue'
       desc: ' Building business relationships and linkages to financial institutions, input, and out markets as well as forward integration.'
     }
   ])
+  const slides = ref([
+    {
+      img: '/img/slide1.png',
+      title: 'Vision',
+      desc: 'To Provide agricultural solutions to an oil dependent Nigeria'
+    }, {
+      img: '/img/slide2.png',
+      title: 'Mission',
+      desc: 'To provide Business Support to the vulnerable group in the VC which are mainly women and youth'
+    }, {
+      img: '/img/slide3.png',
+      title: 'Core Value',
+      desc: ' Building business relationships and linkages to financial institutions, input, and out markets as well as forward integration.'
+    }
+  ])
 </script>
+
 <style lang="scss">
 
 .big {
@@ -199,6 +451,14 @@ import Clients from 'components/Clients.vue'
 }
 .big:hover {
   z-index: 4
+}
+.small_btn {
+  background: white;
+  transition: .25s ease-in-out;
+}
+.small_btn:hover {
+  background: linear-gradient(110.24deg, #448b42 36.53%, #05bd01 115.27%);
+  transform: scale(1.1)
 }
 .small_img_container {
   display: flex;
@@ -218,7 +478,7 @@ import Clients from 'components/Clients.vue'
 }
 }
 .main_center {
-  margin: 7em 0;
+  margin: 4em 0;
 }
 .desc_container {
   max-width: 500px;
@@ -229,5 +489,14 @@ import Clients from 'components/Clients.vue'
     width: 100%;
   }
 }
+@media(min-width: 768px){
+  .arrow_container {
+    left: -12em;
+  position: absolute;
+  justify-content: start;
+  margin-bottom: 0;
+  }
+  
 
+}
 </style>

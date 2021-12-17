@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header
-      class="bg_btn text-yellow text-base border-b no-shadow py-4 p-2"
+      class="bg_btn text-yellow text-base no-shadow py-4 p-2"
       reveal
       :reveal-offset="500"
       >

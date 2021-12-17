@@ -1,5 +1,5 @@
 <template>
-    <div class="flex transform -translate-y-24 border-4 border-white  bg-green gap-10 mx-auto text-center sm:text-left sm:flex-row sm:flex-nowrap justify-center p-6 max-w-3xl rounded-lg items-center">
+    <div class="flex transform -translate-y-24 border-4 shadow-lg border-white  bg-green gap-10 mx-auto text-center sm:text-left sm:flex-row sm:flex-nowrap justify-center p-6 max-w-3xl rounded-lg items-center">
         <div class="img_container">
             <img :src="'/img/250+.svg'" class="w-full"/>
         </div>
