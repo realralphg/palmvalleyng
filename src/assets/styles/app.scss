@@ -22,7 +22,7 @@
             
             .splide__arrows {
                 position: absolute;
-                bottom: -6em;
+                bottom: -7em;
                 left: 0;
                 right: 0;
                 display: flex;
@@ -43,6 +43,13 @@
                 z-index: 1;
             }
             
+            .bg-green.h-50 {
+                height: 38em;
+                .splide__track {
+                    overflow-y: unset;
+                }
+            }
+            
             .splide__arrow svg {
                 fill: #FFD600;
                 height: 1.2em;
@@ -52,6 +59,12 @@
             .splide__arrow:hover {
                 background: linear-gradient(110.24deg, #448b42 36.53%, #05bd01 115.27%);
                 transform: scale(1.1)
+            }
+            
+            .splide__slide.is-active.is-visible {
+                .up {
+                    transform: translateY(-24px);
+                }
             }
             
             .transp_bg {

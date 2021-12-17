@@ -1,5 +1,5 @@
 <template>
-<div class="card_wrap rounded-md my-2 shadow-xl mt-20">
+<div class="card_wrap up rounded-md my-2 shadow-xl mt-20">
     <div
           class="
             p-4 flex 
@@ -34,9 +34,12 @@
 </script>
 
 <style lang="scss" scoped>
+.up {
+    transition: .12s ease-in-out;
+}
 .services_card {
   height: 20em;
-  max-width: 28em;
+  max-width: 25em;
  
 }
 // .card_wrap {

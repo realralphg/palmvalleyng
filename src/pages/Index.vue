@@ -421,7 +421,7 @@
     
           <div class="text-2xl max-w-xl mx-auto my-10 font-light flex justify-center items-center flex text-green poppins   ">
             <span class="font-bold relative under_after mr-1">Our Success </span>Stories </div>
-       <div class="bg-green p-4 py-10">
+       <div class="bg-green p-4 py-10 flex justify-center items-center h-50">
           <div>
           <Splide :options="{
   
@@ -456,6 +456,22 @@
           </Splide>
         </div>
        </div>
+       <div class="bg-green py-6 my-2">
+         <div class="wrapper ">
+           <div class="max-w-2xl my-4 mx-auto tex-center">
+             <p class="text-2xl relative poppins mb-4 text-white under_after font-semibold">Contact Us</p>
+             <p class="text-base text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempory</p>
+           </div>
+           <Form />
+         </div>
+       </div>
+       <div>
+          <div class="text-2xl max-w-xl mx-auto my-10 font-light flex justify-center items-center flex text-green poppins   ">
+            <span class="font-bold relative under_after mr-1">Our Partners </span></div>
+       </div>
+       <div class="flex gap-4">
+         <img class="p-2 hover:shadow-lg rounded" :src="partner" v-for="(partner, index) in partners" :key="index"/>
+       </div>
   </q-page>
 </template>
 
@@ -466,7 +482,7 @@ import WhoWeAre from 'components/WhoWeAre.vue'
 import TestimonySlide from 'components/testimonySlide.vue'
 import Clients from 'components/Clients.vue'
 import Slide from 'components/Slide.vue'
-
+import Form from 'components/Form.vue'
 
     const bigImg = ref('/img/img1.png')
     const images = reactive([
@@ -492,6 +508,15 @@ import Slide from 'components/Slide.vue'
       desc: ' Building business relationships and linkages to financial institutions, input, and out markets as well as forward integration.'
     }
   ])
+  const partners = ref([
+    '/img/partners/img1',
+    '/img/partners/img2',
+    '/img/partners/img3',
+    '/img/partners/img4',
+    '/img/partners/img5',
+    '/img/partners/img6',
+    '/img/partners/img7'
+  ])
   const slides = ref([
     {
       img: '/img/slide1.png',
@@ -509,8 +534,8 @@ import Slide from 'components/Slide.vue'
   ])
   const testimonies = ref([
     "PVNL in partnership with Base of the Pyramid Innovation Center, Netherland (implemented by 2SCALE) supported the development of marketing concept for Tombrown processing among 2,000 women and youth groundnut processors in Pampaida, Ikara LGA Kaduna State in year 2016.",
-  "PVNL provided business support to N2Africa project on soybeans inoculation at Lere, Kubau, Kajuru and Jema’a LGA from 2013 to 2017.",
-  "PVNL provided business support to N2Africa project on soybeans inoculation at Lere, Kubau, Kajuru and Jema’a LGA from 2013 to 2017."])
+  "PVNL provided business support to N2Africa project on soybeans inoculation at Lere, Kubau, Kajuru and Jema'a LGA from 2013 to 2017.",
+  "PVNL provided business support to N2Africa project on soybeans inoculation at Lere, Kubau, Kajuru and Jema'a LGA from 2013 to 2017."])
 </script>
 
 <style lang="scss">
