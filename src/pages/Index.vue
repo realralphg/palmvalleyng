@@ -681,11 +681,11 @@ import BlogCard from 'components/BlogCard.vue'
   z-index: 2;
 .small_img {
   
+<<<<<<< HEAD
   max-width: 10em;
+=======
+  max-width: 11em;
    img {
-     width: 100%
-   }
-}
 }
 .main_center {
   margin: 4em 0;
