@@ -3,15 +3,15 @@
     <div class="max-w-2xl my-4 mx-auto flex flex-col gap-4">
              <div class="input-box">
                <label class="text-white font-medium text-base">Fullname</label>
-               <input class="p-3 text-lg outline-none rounded-sm" placeholder="enter your fullname"  type="text" />
+               <input class="p-3 text-lg outline-none rounded-sm"   type="text" />
              </div>
              <div class="input-box">
                <label class="text-white font-medium text-base">Email</label>
-               <input class="p-3 text-lg outline-none rounded-sm" placeholder="enter your email"  type="email" />
+               <input class="p-3 text-lg outline-none rounded-sm"   type="email" />
              </div>
               <div class="input-box">
                <label class="text-white font-medium text-base">Message</label>
-               <textarea  class="p-3 text-lg outline-none rounded-sm" placeholder="enter your message"  />
+               <textarea  class="p-3 text-lg outline-none rounded-sm"   />
              </div>
              
            </div>
@@ -23,8 +23,9 @@
               p-3
               mx-auto
               rounded
+              hover:text-yellow
               bg-white
-              text-yellow
+              text-green
               font-medium
             "
             >

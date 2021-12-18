@@ -1,17 +1,15 @@
 <template>
-    <div class="slide_container border rounded bg-white shadow-lg p-4">
-        <q-img src="../assets/img/slide1.png" class="shadow-lg rounded "/>
-        <div class="details_container my-4">
-            <p class="font-semibold text-lg">Alphabet Visitation</p>
-            <p>Nigerian army farms and ranches visited Alphavet 
-                which is a leading vetinerary pharmaceuticals 
-                manufacturing company.</p>
-                <p class="text-gray-500 text-sm">- Székesfehérvár, Homoksor, Hungary</p>
-                <q-btn
+    <div class="slide_container border rounded bg-white  p-4">
+        <div class="relative img_wrapper">
+            <q-img :src="blog.img" class="shadow-lg rounded "/>
+            <q-btn
             class="
               flex
+              left_bottom
               my-4
               justify-between
+              absolute 
+              left-0
               items-center
               p-3
               rounded
@@ -41,19 +39,38 @@
             </div>
           </q-btn>
         </div>
+        
+        <div class="details_container my-4">
+            <p class=" text-base text-green">{{blog.date}}</p>
+            <p class="text-black font-semibold text-lg hover:underline">{{blog.desc}}</p>
+               
+        </div>
     </div>
 </template>
 
 <script setup>
-
+ const props = defineProps({
+  blog: Object,
+//   index: Number
+})
 </script>
 
 <style lang="scss" scoped>
 .slide_container {
-    min-height: 30em;
+    height: 45em;
     width: 25em;
 }
 .img_container {
 
+}
+.img_wrapper {
+    max-height: 35em;
+    img {
+        height: 100%;
+    }
+}
+.left_bottom {
+    bottom: -1em;
+    left: 0.25em;
 }
 </style>

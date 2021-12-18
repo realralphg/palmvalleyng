@@ -421,7 +421,7 @@
     
           <div class="text-2xl max-w-xl mx-auto my-10 font-light flex justify-center items-center flex text-green poppins   ">
             <span class="font-bold relative under_after mr-1">Our Success </span>Stories </div>
-       <div class="bg-green p-4 py-10 flex justify-center items-center h-50">
+       <div class="bg_btn p-4 testimony_container py-10 flex justify-center items-center h-50">
           <div>
           <Splide :options="{
   
@@ -456,7 +456,48 @@
           </Splide>
         </div>
        </div>
-       <div class="bg-green py-6 my-2">
+       <div class="blog_container mb-20">
+         <div class="wrapper">
+           
+           <div class="flex flex-col justify-center text-center items-center mb-10 my-4">
+        <p class="text-2xl relative poppins mb-4 text-green under_after font-semibold">Blog and Update</p>
+        <p class="max-w-lg">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempory</p>
+      </div>
+            <Splide :options="{
+  
+          padding: '5rem',
+          gap    : '2rem',
+          arrowPath: 'M31.7777 18.4166L17.9207 4.55963L21.5735 0.906799L41.6667 21L21.5735 41.0931L17.9207 37.4403L31.7777 23.5833H0.333344V18.4166H31.7777Z',
+          autoWidth: true,
+          classes: {
+            arrows: 'splide__arrows flex gap-5 mb-10 flex justify-center gap-2',
+            arrow : 'splide__arrow shadow-md rounded small_btn p-4',
+            prev  : 'splide__arrow--prev ',
+            next  : 'splide__arrow--next ',
+          },
+          focus  : 'center',
+          perPage: 3,
+          breakpoints: {
+            640: {
+              perPage: 3,
+              gap    : '.7rem',
+              type   : 'loop',
+            },
+            480: {
+              perPage: 3,
+              gap    : '.7rem',
+              type   : 'loop',
+            }}
+            }">
+            
+              <SplideSlide v-for ="(blog, index) in blogs" :key="index" >
+                <BlogCard :blog="blog" :index="index"/>
+              </SplideSlide>
+              
+          </Splide>
+         </div>
+       </div>
+       <div class="bg_btn py-6 my-2">
          <div class="wrapper ">
            <div class="max-w-2xl my-4 mx-auto tex-center">
              <p class="text-2xl relative poppins mb-4 text-white under_after font-semibold">Contact Us</p>
@@ -465,13 +506,21 @@
            <Form />
          </div>
        </div>
-       <div>
+       <div class="wrapper">  
+    <div>
           <div class="text-2xl max-w-xl mx-auto my-10 font-light flex justify-center items-center flex text-green poppins   ">
             <span class="font-bold relative under_after mr-1">Our Partners </span></div>
        </div>
-       <div class="flex gap-4">
-         <img class="p-2 hover:shadow-lg rounded" :src="partner" v-for="(partner, index) in partners" :key="index"/>
+       
+       <div class="gap-10 items-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 flax-wrap">
+         <div class="p-2 hover:shadow-lg w-40 p-2 rounded"  v-for="(partner, index) in partners" :key="index">
+           <img :src="partner" class="w-full"/>
+         </div>
+         
        </div>
+       </div>
+
+       
   </q-page>
 </template>
 
@@ -483,6 +532,7 @@ import TestimonySlide from 'components/testimonySlide.vue'
 import Clients from 'components/Clients.vue'
 import Slide from 'components/Slide.vue'
 import Form from 'components/Form.vue'
+import BlogCard from 'components/BlogCard.vue'
 
     const bigImg = ref('/img/img1.png')
     const images = reactive([
@@ -493,6 +543,28 @@ import Form from 'components/Form.vue'
     bigImg.value = images[index]
     images[index] = bigImgSamp
   }
+  const blogs = ref([
+    {
+      img: '/img/blog/img1.png',
+      date: '12 October,2021',
+      desc: 'Africa Agriculture Pioneer Wins 2017 World Food Prize.'
+    },
+    {
+      img: '/img/blog/img2.png',
+      date: '12 October,2021',
+      desc: 'Why a New Potato Variety could be a Game-Changer For...'
+    },
+    {
+      img: '/img/blog/img3.png',
+      date: '12 October,2021',
+      desc: 'High-tech farming in Canada...'
+    },
+    {
+      img: '/img/blog/img4.png',
+      date: '12 October,2021',
+      desc: 'High-tech farming in Canada...'
+    },
+  ])
   const services = ref([
     {
       img: '/img/Eyes.svg',
@@ -509,13 +581,13 @@ import Form from 'components/Form.vue'
     }
   ])
   const partners = ref([
-    '/img/partners/img1',
-    '/img/partners/img2',
-    '/img/partners/img3',
-    '/img/partners/img4',
-    '/img/partners/img5',
-    '/img/partners/img6',
-    '/img/partners/img7'
+    '/img/partners/img1.png',
+    '/img/partners/img2.png',
+    '/img/partners/img3.png',
+    '/img/partners/img4.png',
+    '/img/partners/img5.png',
+    '/img/partners/img6.png',
+    '/img/partners/img7.png'
   ])
   const slides = ref([
     {
@@ -561,6 +633,9 @@ import Form from 'components/Form.vue'
 .small_btn:hover {
   background: linear-gradient(110.24deg, #448b42 36.53%, #05bd01 115.27%);
   transform: scale(1.1)
+}
+.testimony_container {
+  height: 40em
 }
 .small_img_container {
   display: flex;
