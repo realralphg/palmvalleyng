@@ -6,9 +6,13 @@
       :reveal-offset="500"
       >
       <div class="wrapper header flex flex-nowrap justify-between items-center">
-        <q-avatar class="bg-transparent w-12 h-12">
+        <div class="flex items-center gap-2">
+          <q-avatar class="bg-transparent w-12 h-12">
           <img src="../assets/img/palm_logo.png" />
         </q-avatar>
+        <p class="hidden sm:block text-white poppins text-lg">Palm Valley Ng</p>
+        </div>
+        
         <nav class="desktop_nav">
           <ul class="flex link_list flex-nowrap">
             <li
@@ -16,7 +20,7 @@
               :key="index"
               class="
                 li_dropdown_link
-                text-yellow
+                text-white
                 font-medium
                 p-2
                 px-4
@@ -68,7 +72,7 @@
                 sigin_btn
                 mr-2
                 px-4
-                text-yellow
+                text-white
                 border border-yellow
                 rounded
                 font-medium
