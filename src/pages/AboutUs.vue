@@ -50,20 +50,22 @@
             </div>
           </button>
         </div>
-         <q-img
+        <div class="img_container under_dots right relative rounded-md shadow-lg">
+        <img
               src="../assets/img/aboutUs.png"
-              spinner-color="primary"
-              spinner-size="82px"
-              class="img_container overflow-hidden rounded-md shadow-lg"
+              class="rounded"
             />
+        </div>
+         
       </div>
       <div class="flex justify-evenly flex-center">
-        <q-img
+        <div class="img_container under_dots right relative rounded-md shadow-lg">
+          <img
+              class="rounded"
               src="../assets/img/group.png"
-              spinner-color="primary"
-              spinner-size="82px"
-              class="img_container overflow-hidden rounded-md shadow-lg"
             />
+        </div>
+        
         <div class="desc_container my-5">
           <p class="text-2xl  text-green relative poppins mb-4 under_after font-semibold">
             One-step-shop
@@ -111,13 +113,15 @@
           </q-btn>
         </div>
       </div>
-      <div class="flex justify-evenly my-10 main_center flex-center">
-         <q-img
+      <div class="flex justify-evenly my-10 mb-20 main_center flex-center">
+        <div class="img_container under_dots right relative sm:order-last ">
+          <img
               src="../assets/img/man.png"
-              spinner-color="primary"
-              spinner-size="82px"
-              class="img_container overflow-hidden sm:order-last rounded-md shadow-lg"
+             class="rounded-md shadow-lg"
+              
             />
+        </div>
+         
         
         <div class="desc_container  my-5">
           <div class="text-2xl  text-green relative poppins mb-4 under_after font-semibold">
@@ -168,7 +172,27 @@
         </div>
       </div>
     </div>
-    <div></div>
+    <div>
+      <div class="wrapper">
+        <div class="mx-auto max-w-4xl shadow-lg my-20 border gap-10 items-center rounded-md sm:grid grid-cols-2 p-4">
+        <div class="flex gap-4 sm:flex-nowrap justify-center  items-center">
+          <div class="rate">
+          <img :src="'/img/workforce.svg'" />
+
+          </div>
+          <div class="m-4 text-2xl font-medium ">Active Workforce</div>
+        </div>
+        <div class="flex gap-4 sm:flex-nowrap  justify-center my-2 items-center">
+          <div class="rate">
+          <img :src="'/img/foodPercent.svg'" />
+
+          </div>
+          <div class="m-4 text-2xl font-medium ">Of Food in Nigeria</div>
+        </div>
+      </div>
+      </div>
+      
+    </div>
   </q-page>
 </template>
 
@@ -188,6 +212,12 @@ export default defineComponent({
   max-width: 30em;
   img {
     width: 100%;
+  }
+}
+.rate {
+  max-width: 100px;
+  img {
+    width:100%;
   }
 }
 </style>

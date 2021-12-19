@@ -128,3 +128,22 @@
                 background-color: #054f05bd;
                 background-blend-mode: darken;
             }
+            
+            .under_dots::after {
+                content: "";
+                position: absolute;
+                bottom: -50px;
+                background-image: url('/img/dots.svg');
+                width: 10em;
+                height: 10em;
+                z-index: -1;
+                background-size: cover;
+            }
+            
+            .under_dots.left::after {
+                left: -50px
+            }
+            
+            .under_dots.right::after {
+                right: -50px
+            }
