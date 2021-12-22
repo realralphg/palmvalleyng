@@ -1,5 +1,6 @@
 <template>
   <q-page>
+    <BreadCrumb :title="'About Us'" :desc="'Providing agricultural solutions to an oil dependent Nigeria.'"/>
     <div class="wrapper">
       <div class="flex justify-evenly my-10 main_center flex-center">
         <div class="desc_container my-5">
@@ -193,6 +194,104 @@
       </div>
       
     </div>
+     <div class="flex justify-evenly my-10 main_center flex-center">
+        <div class="desc_container my-5">
+          <div class="text-2xl  text-green relative poppins mb-4 under_after font-semibold">
+            Our Core Activities
+          </div>
+          <p class="text-lg my-4">
+            Palm Valley Nigeria Limited (PVNL) is a limited liability company
+            registered under the company Allied Matters Act of 1990 with RC No
+            792177...
+          </p>
+          <div class="" style="max-width: 350px">
+            <q-list >
+              <q-item v-for="(list, index) in data" :key="index">
+                <q-item-section avatar>
+                  <q-icon :class="'text-green'" :name="list.icon" />
+                </q-item-section>
+
+                <q-item-section>{{list.title}}</q-item-section>
+              </q-item>     
+            </q-list>
+          </div>
+
+          
+        </div>
+        <div class="img_container under_dots right relative rounded-md shadow-lg">
+        <img
+              :src="'/img/truck2.png'"
+              class="rounded"
+            /><button
+            class="
+              flex
+              left_bottom
+              my-4
+              justify-between
+              absolute 
+              left-0
+              items-center
+              p-3
+              rounded
+              bg_btn
+              text-yellow
+              font-medium
+            "
+          >
+            <span>View More</span>
+            <div class="ml-4">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 11.7256C4 11.3459 4.28215 11.0321 4.64823 10.9824L4.75 10.9756H19.75C20.1642 10.9756 20.5 11.3114 20.5 11.7256C20.5 12.1053 20.2178 12.4191 19.8518 12.4687L19.75 12.4756L4.75 12.4756C4.33579 12.4756 4 12.1398 4 11.7256Z"
+                  fill="#FFD600"
+                />
+                <path
+                  d="M13.171 6.23271C12.8775 5.94045 12.8765 5.46558 13.1687 5.17206C13.4344 4.90522 13.851 4.88012 14.1451 5.09734L14.2294 5.16977L20.2794 11.1938C20.547 11.4603 20.5714 11.8784 20.3524 12.1724L20.2794 12.2567L14.2294 18.2817C13.9359 18.574 13.4611 18.573 13.1688 18.2795C12.9031 18.0127 12.8797 17.5959 13.0982 17.3028L13.171 17.2188L18.687 11.7249L13.171 6.23271Z"
+                  fill="#FFD600"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+         
+      </div>
+      <div class="curved_green_bg">
+        <div class="wrapper">
+          <div class=" p-4 w-full bg-white">
+            <div class="text-2xl mb-10  text-green relative poppins mb-4 under_after font-semibold">
+            Our Gallery
+          </div>
+          <div class="images_container gap-4">
+              <div class="div1"><img
+              :src="'/img/gallery/img.png'"
+              class="rounded"
+            /></div>
+              <div class="div2"><img
+              :src="'/img/gallery/img2.png'"
+              class="rounded"
+            /></div>
+              <div class="div3"><img
+              :src="'/img/gallery/img3.png'"
+              class="rounded"
+            /></div>
+              <div class="div4"><img
+              :src="'/img/gallery/img4.png'"
+              class="rounded"
+            /></div>
+              <div class="div5"><img
+              :src="'/img/gallery/img5.png'"
+              class="rounded"
+            /></div>
+            </div>
+          </div>
+        </div>
+      </div>
     <Newsletter />
     <div class="bg_btn py-10 mt-2">
          <div class="wrapper ">
@@ -207,8 +306,42 @@
 </template>
 
 <script setup>
+import BreadCrumb from '../components/BreadCrumb.vue'
 import Newsletter from '../components/Newsletter.vue'
 import Form from '../components/Form.vue'
+import {ref} from 'vue'
+const data = ref([
+  {
+    icon: 'grass',
+    title: 'Agricultural Value Chain Development'
+  },
+  {
+    icon: 'link',
+    title: 'Linkages'
+  },{
+    icon: 'agriculture',
+    title: 'Produce Aggregation and Off Take'
+  },{
+    icon: 'people',
+    title: 'Coaching and Mentoring'
+  },{
+    icon: 'people',
+    title: 'Agribusiness Cluster Formation (ABC)'
+  },{
+    icon: 'settings',
+    title: 'Mechanization Service Providers'
+  },{
+    icon: 'warehouse',
+    title: 'Warehouse Receipt System'
+  },
+  {
+    icon: 'support_agent',
+    title: 'Business Support Services'
+  },{
+    icon: 'grass',
+    title: 'Agricultural Consultants'
+  },
+])
 </script>
 
 <style lang="scss" scoped>
@@ -226,5 +359,40 @@ import Form from '../components/Form.vue'
   img {
     width:100%;
   }
+}
+.img_wrapper {
+    max-height: 35em;
+    img {
+        height: 100%;
+    }
+}
+.left_bottom {
+    bottom: -1em;
+    left: 0.25em;
+}
+.curved_green_bg {
+  height:75em;
+  background-size: 100% 75em;
+}
+@media (min-width: 995px){
+  .images_container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  // grid-column-gap: 0px;
+  // grid-row-gap: 0px;
+
+  div {
+    img {
+      width: 100%
+    }
+  }
+  }
+
+.div1 { grid-area: 1 / 1 / 5 / 3; }
+.div2 { grid-area: 1 / 3 / 3 / 5; }
+.div3 { grid-area: 3 / 3 / 5 / 5; }
+.div4 { grid-area: 3 / 5 / 5 / 7; }
+.div5 { grid-area: 1 / 5 / 3 / 7; }
 }
 </style>

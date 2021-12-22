@@ -8,26 +8,29 @@ const routes = [{
         component: () =>
             import ('layouts/MainLayout.vue'),
         children: [{
-            path: '',
-            component: () =>
-                import ('pages/Index.vue')
-        }, {
-            path: '/company',
-            component: Company,
-            children: [{
-                path: 'about-us',
+                path: '',
+                component: () =>
+                    import ('pages/Index.vue')
+            }, {
+                path: '/company',
+                component: Company,
+            }, {
+                path: '/company/about-us',
                 component: AboutUs
-            }, {
-                path: 'activities',
+            },
+            {
+                path: '/our-activities',
                 component: Activities
-            }, {
-                path: 'businesses',
+            },
+            {
+                path: '/company/businesses',
                 component: Businesses
-            }, {
-                path: 'partnership',
+            },
+            {
+                path: '/company/partnership',
                 component: Partnership
-            }]
-        }, ]
+            }
+        ]
     },
 
 

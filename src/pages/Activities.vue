@@ -1,5 +1,7 @@
 <template>
     <q-page>
+        <BreadCrumb :title="'Our core Activities'" :desc="'Providing agricultural solutions to an oil dependent Nigeria.'"/>
+   
     <div class="wrapper">
       <div v-for="(activity, index) in activities" :key="index" :class="activity.flexDirection" class="flex md:flex-nowrap justify-evenly my-10 main_center  flex-center">
         <div class="desc_container">
@@ -37,6 +39,7 @@
 </template>
 
 <script setup>
+import BreadCrumb from '../components/BreadCrumb.vue'
 import Newsletter from '../components/Newsletter.vue'
 import {ref} from 'vue'
 const activities = ref([
@@ -96,6 +99,9 @@ const activities = ref([
     border-radius: .2em;
     background-color: #FFD600;
     // margin: .5em 0;k
+}
+.img_container {
+    overflow: unset !important;
 }
 .under_green::after {
     content: "";

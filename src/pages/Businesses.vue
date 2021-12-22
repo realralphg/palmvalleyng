@@ -1,5 +1,6 @@
 <template>
   <q-page>
+    <BreadCrumb :title="'Our Businesses'" :desc="'Palm Valley Nigeria is a household name in Agribusiness Support Service provision in Nigeria'"/>
     <div class="wrapper">
       <div class="flex justify-evenly my-10 main_center flex-center">
         <div class="desc_container">
@@ -64,6 +65,7 @@
 </template>
 
 <script setup>
+import BreadCrumb from '../components/BreadCrumb.vue'
 import Newsletter from '../components/Newsletter.vue'
 import {ref} from 'vue'
 const data = ref([

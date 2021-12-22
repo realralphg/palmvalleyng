@@ -1,5 +1,6 @@
 <template>
     <div >
+      <BreadCrumb :title="'Partnership with Agribusiness Clusters'" :desc="'Palm Valley Nigeria is a household name in Agribusiness Support Service provision in Nigeria'"/>
         <div class="wrapper ">
             <p class="my-2 font-medium text-lg">PVNL provides business support services to the following agribusiness clusters and Cooperative associations</p>
         <div class="q-pa-md">
@@ -29,6 +30,7 @@
 </template>
 
 <script setup>
+import BreadCrumb from '../components/BreadCrumb.vue'
 import Newsletter from '../components/Newsletter.vue'
 import { ref } from 'vue'
 const filter = ref('')

@@ -478,6 +478,7 @@
 
 <script setup>
 import { ref, reactive,computed } from "vue";
+import { useMeta } from 'quasar'
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import WhoWeAre from 'components/WhoWeAre.vue'
 import TestimonySlide from 'components/testimonySlide.vue'
@@ -486,7 +487,16 @@ import Slide from 'components/Slide.vue'
 import Form from 'components/Form.vue'
 import BlogCard from 'components/BlogCard.vue'
 import Newsletter from 'components/Newsletter.vue'
+    const metaData = {
+      title: 'Palm valley Ng',
+      meta: {
+    description: { name: 'description', content: 'Palm valley Ng Providing agricultural solutions to an oil dependent Nigeria.' },
+    keywords: { name: 'keywords', content: 'palm valley nigeria agricultural solutions about us contact us' },
+    equiv: { 'http-equiv': 'Content-Type', content: 'text/html; charset=UTF-8' },
     
+  },
+    }
+    useMeta(metaData)
     const images = reactive([
       {
         img:'/img/img1.png',
