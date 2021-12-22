@@ -193,15 +193,22 @@
       </div>
       
     </div>
+    <Newsletter />
+    <div class="bg_btn py-10 mt-2">
+         <div class="wrapper ">
+           <div class="max-w-2xl my-4 mx-auto tex-center">
+             <p class="text-2xl relative poppins mb-4 text-white under_after font-semibold">Contact Us</p>
+             <p class="text-base text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempory</p>
+           </div>
+           <Form />
+         </div>
+       </div>
   </q-page>
 </template>
 
-<script>
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: "AboutUS",
-});
+<script setup>
+import Newsletter from '../components/Newsletter.vue'
+import Form from '../components/Form.vue'
 </script>
 
 <style lang="scss" scoped>

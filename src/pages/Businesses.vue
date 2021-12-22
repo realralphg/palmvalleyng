@@ -28,8 +28,8 @@
           <img src="../assets/img/business.png" />
         </div>
       </div>
-    <p class="font-medium text-base py-2">The following are organizations we have established partnership to support the growth of Agriculture in Nigeria:</p>
-      <div class="border overflow-hidden shadow-lg text-base rounded-lg" bordered>
+     <p class="font-medium text-base  py-2">The following are organizations we have established partnership to support the growth of Agriculture in Nigeria:</p>
+      <div class="border overflow-hidden my-4 mb-20 shadow-lg text-base rounded-lg" bordered>
         <q-list>
             <div v-for="(title, index) in data"
             :key="index">
@@ -59,10 +59,12 @@
         </q-list>
       </div>
     </div>
+    <Newsletter />
   </q-page>
 </template>
 
 <script setup>
+import Newsletter from '../components/Newsletter.vue'
 import {ref} from 'vue'
 const data = ref([
   {

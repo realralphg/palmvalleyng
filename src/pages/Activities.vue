@@ -1,7 +1,7 @@
 <template>
     <q-page>
     <div class="wrapper">
-      <div v-for="(activity, index) in activities" :key="index" :class="activity.flexDirection" class="flex justify-evenly my-10 main_center flex-center">
+      <div v-for="(activity, index) in activities" :key="index" :class="activity.flexDirection" class="flex md:flex-nowrap justify-evenly my-10 main_center  flex-center">
         <div class="desc_container">
           <div class="text-2xl text-green relative poppins mb-4 under_after font-semibold" v-html="activity.title">
             
@@ -23,49 +23,63 @@
               :src="'./img/' + activity.img + '.png'"
               spinner-color="primary"
               spinner-size="82px"
-              class="img_container overflow-hidden border rounded-md shadow-lg"
+              :class="activity.pseudo"
+              class="img_container overflow-unset under_green mt-10 relative rounded-md shadow-lg"
             />
         
       </div>
     </div>
+    <div class="my-4">
+        <Newsletter />
+    </div>
+    
     </q-page>
 </template>
 
 <script setup>
+import Newsletter from '../components/Newsletter.vue'
 import {ref} from 'vue'
 const activities = ref([
     {
         title: '<p>Agricultural Value <br />Chain Development</p>',
         img: 'activities_1',
         flexDirection: 'flex-row',
+        pseudo: 'bottom-left'
     },{
         title: '<p>Business Support <br />Services</p>',
         img: 'activities_2',
         flexDirection: 'flex-row-reverse',
+        pseudo: 'top-right'
     },{
         title: '<p>Agricultural Consultants</p>',
         img: 'activities_3',
         flexDirection: 'flex-row',
+        pseudo: 'bottom-left'
     },{
         title: '<p>Linkages</p>',
         img: 'handShake',
         flexDirection: 'flex-row-reverse',
+        pseudo: 'top-right'
     },{
         title: '<p>Agribusiness Cluster <br />Formation (ABC)</p>',
         img: 'activities_4',
         flexDirection: 'flex-row',
+        pseudo: 'bottom-left'
     },{
         title: '<p>Produce Aggregation <br />and Off Take</p>',
         img: 'truck',
         flexDirection: 'flex-row-reverse',
+        pseudo: 'top-right'
     },{
         title: '<p>Warehouse Receipt <br />System</p>',
         img: 'activities_5',
         flexDirection: 'flex-row',
+        pseudo: 'bottom-left'
     },{
         title: '<p>Mechanization Service <br />Providers</p>',
         img: 'activities_6',
         flexDirection: 'flex-row-reverse',
+        pseudo: 'top-right'
     }
 ])
 </script>
@@ -82,5 +96,24 @@ const activities = ref([
     border-radius: .2em;
     background-color: #FFD600;
     // margin: .5em 0;k
+}
+.under_green::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    
+    z-index: -1;
+    background-color: green;
+    border-radius: 3px;
+}
+.under_green.bottom-left::after {
+    bottom:-3em;
+    left: -3em;
+}
+.under_green.top-right::after {
+    top:-3em;
+    right: -3em;
 }
 </style>

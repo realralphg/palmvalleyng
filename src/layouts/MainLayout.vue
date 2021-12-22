@@ -18,16 +18,16 @@
             <li
               v-for="(link, index) in essentialLinks"
               :key="index"
-              class="
+              
+            >
+              <router-link :to="{ path: link.link }" class="
                 li_dropdown_link
                 text-white
                 font-medium
                 p-2
                 px-4
                 relative
-              "
-            >
-              <router-link :to="{ path: link.link }">
+              ">
                 {{ link.title }}
               </router-link>
               <ul
@@ -186,7 +186,7 @@
       <q-page-container>
         <router-view />
       </q-page-container>
-      <footer class="py-6 mt-4 pt-10 text-white">
+      <footer class="py-6  pt-10 text-white">
         <!-- <p class="text-red-500">This is the footer</p> -->
         <div class="
           wrapper
@@ -400,6 +400,16 @@ li.links {
     display: none;
   }
   
+}
+li .router-link-exact-active::after {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  width: 80%;
+  height: 4px;
+  border-radius: .4em;
+  margin: 0 auto;
+  background-color: yellow;
 }
 </style>
 
