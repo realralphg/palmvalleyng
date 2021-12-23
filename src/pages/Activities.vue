@@ -42,6 +42,30 @@
 import BreadCrumb from '../components/BreadCrumb.vue'
 import Newsletter from '../components/Newsletter.vue'
 import {ref} from 'vue'
+import { useMeta } from 'quasar'
+
+const metaData = {
+  // sets document title
+  title: 'Activities',
+  // optional; sets final title as "Index Page - My Website", useful for multiple level meta
+  titleTemplate: title => `${title} - Palm Value NG`,
+
+  // meta tags
+  meta: {
+    description: { name: 'description', content: 'Our Core Activities on Palm valley Nigeria' },
+    keywords: { name: 'keywords', content: 'Our core Activities on palm valley nigeria' },
+    equiv: { 'http-equiv': 'Content-Type', content: 'text/html; charset=UTF-8' },
+    // note: for Open Graph type metadata you will need to use SSR, to ensure page is rendered by the server
+    ogTitle:  {
+      property: 'og:title',
+      // optional; similar to titleTemplate, but allows templating with other meta properties
+      template (ogTitle) {
+        return `${ogTitle} - Palm Valley Ng`
+      }
+    }
+  }
+}
+useMeta(metaData)
 const activities = ref([
     {
         title: '<p>Agricultural Value <br />Chain Development</p>',
@@ -90,12 +114,12 @@ const activities = ref([
 <style lang="scss" >
 .under_after::after {
     content: "";
-    width: 20%;
+    width: 3em;
     display: block;
     position: absolute;
     left: 0;
     bottom: -5px;
-    height: 2px;
+    height: 5px;
     border-radius: .2em;
     background-color: #FFD600;
     // margin: .5em 0;k

@@ -455,7 +455,7 @@ const linksList = [
     title: "Contact Us",
     caption: "forum.quasar.dev",
     icon: "record_voice_over",
-    link: "https://forum.quasar.dev",
+    link: "/company/contact-us",
   },
 ];
 

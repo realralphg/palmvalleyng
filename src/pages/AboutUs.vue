@@ -194,7 +194,8 @@
       </div>
       
     </div>
-     <div class="flex justify-evenly my-10 main_center flex-center">
+    <div class="wrapper">
+        <div class="flex  justify-evenly my-10 main_center flex-center">
         <div class="desc_container my-5">
           <div class="text-2xl  text-green relative poppins mb-4 under_after font-semibold">
             Our Core Activities
@@ -261,6 +262,8 @@
         </div>
          
       </div>
+    </div>
+     
       <div class="curved_green_bg">
         <div class="wrapper">
           <div class=" p-4 w-full bg-white">
@@ -310,6 +313,30 @@ import BreadCrumb from '../components/BreadCrumb.vue'
 import Newsletter from '../components/Newsletter.vue'
 import Form from '../components/Form.vue'
 import {ref} from 'vue'
+import { useMeta } from 'quasar'
+
+const metaData = {
+  // sets document title
+  title: 'About Us',
+  // optional; sets final title as "Index Page - My Website", useful for multiple level meta
+  titleTemplate: title => `${title} - Palm Value NG`,
+
+  // meta tags
+  meta: {
+    description: { name: 'description', content: 'Providing agricultural solutions to an oil dependent Nigeria. on Palm valley Nigeria' },
+    keywords: { name: 'keywords', content: 'Providing agricultural solutions to an oil dependent Nigeria. on palm valley nigeria' },
+    equiv: { 'http-equiv': 'Content-Type', content: 'text/html; charset=UTF-8' },
+    // note: for Open Graph type metadata you will need to use SSR, to ensure page is rendered by the server
+    ogTitle:  {
+      property: 'og:title',
+      // optional; similar to titleTemplate, but allows templating with other meta properties
+      template (ogTitle) {
+        return `${ogTitle} - Palm Valley Ng`
+      }
+    }
+  }
+}
+useMeta(metaData)
 const data = ref([
   {
     icon: 'grass',
@@ -371,10 +398,17 @@ const data = ref([
     left: 0.25em;
 }
 .curved_green_bg {
+  height: auto;
+  background-size: cover;
+}
+@media (min-width: 1024px){
+  .curved_green_bg {
   height:75em;
   background-size: 100% 75em;
 }
-@media (min-width: 995px){
+}
+@media (min-width: 448px){
+
   .images_container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -387,7 +421,7 @@ const data = ref([
       width: 100%
     }
   }
-  }
+}
 
 .div1 { grid-area: 1 / 1 / 5 / 3; }
 .div2 { grid-area: 1 / 3 / 3 / 5; }

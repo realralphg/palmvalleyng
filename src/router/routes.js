@@ -1,4 +1,5 @@
 import Company from '../pages/Company.vue';
+import Contact from '../pages/Contact.vue';
 import AboutUs from '../pages/AboutUs.vue';
 import Activities from '../pages/Activities.vue'
 import Businesses from '../pages/Businesses.vue'
@@ -29,6 +30,9 @@ const routes = [{
             {
                 path: '/company/partnership',
                 component: Partnership
+            }, {
+                path: '/company/contact-us',
+                component: Contact
             }
         ]
     },
