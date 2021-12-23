@@ -1,5 +1,6 @@
 <template>
   <q-page>
+    <BreadCrumb :title="'Our Businesses'" :desc="'Palm Valley Nigeria is a household name in Agribusiness Support Service provision in Nigeria'"/>
     <div class="wrapper">
       <div class="flex justify-evenly my-10 main_center flex-center">
         <div class="desc_container">
@@ -28,8 +29,8 @@
           <img src="../assets/img/business.png" />
         </div>
       </div>
-    <p class="font-medium text-base py-2">The following are organizations we have established partnership to support the growth of Agriculture in Nigeria:</p>
-      <div class="border overflow-hidden shadow-lg text-base rounded-lg" bordered>
+     <p class="font-medium text-base  py-2">The following are organizations we have established partnership to support the growth of Agriculture in Nigeria:</p>
+      <div class="border overflow-hidden my-4 mb-20 shadow-lg text-base rounded-lg" bordered>
         <q-list>
             <div v-for="(title, index) in data"
             :key="index">
@@ -59,11 +60,38 @@
         </q-list>
       </div>
     </div>
+    <Newsletter />
   </q-page>
 </template>
 
 <script setup>
+import BreadCrumb from '../components/BreadCrumb.vue'
+import Newsletter from '../components/Newsletter.vue'
 import {ref} from 'vue'
+import { useMeta } from 'quasar'
+
+const metaData = {
+  // sets document title
+  title: 'Businesses',
+  // optional; sets final title as "Index Page - My Website", useful for multiple level meta
+  titleTemplate: title => `${title} - Palm Value NG`,
+
+  // meta tags
+  meta: {
+    description: { name: 'description', content: 'Our Businesses on Palm valley Nigeria' },
+    keywords: { name: 'keywords', content: 'Our Businesses on palm valley nigeria' },
+    equiv: { 'http-equiv': 'Content-Type', content: 'text/html; charset=UTF-8' },
+    // note: for Open Graph type metadata you will need to use SSR, to ensure page is rendered by the server
+    ogTitle:  {
+      property: 'og:title',
+      // optional; similar to titleTemplate, but allows templating with other meta properties
+      template (ogTitle) {
+        return `${ogTitle} - Palm Valley Ng`
+      }
+    }
+  }
+}
+useMeta(metaData)
 const data = ref([
   {
     title: "International Fertilizer Development Centre ( IFDC )",

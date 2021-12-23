@@ -18,18 +18,19 @@
             <li
               v-for="(link, index) in essentialLinks"
               :key="index"
-              class="
-                li_dropdown_link
+              class="li_dropdown_link relative py-2"
+            >
+              <router-link v-if="link.link" :to="{ path: link.link }" class="
+                
                 text-white
                 font-medium
                 p-2
                 px-4
-                relative
-              "
-            >
-              <router-link :to="{ path: link.link }">
+                
+              ">
                 {{ link.title }}
               </router-link>
+              <p class="text-white font-medium p-2 inline px-4 cursor-default" v-else>{{link.title}}</p>
               <ul
                 v-if="link.sublink"
                 class="
@@ -50,7 +51,7 @@
                 "
               >
                 <li
-                  class="p-2 px-4 cursor-default"
+                  class="p-2 px-4 sub_link cursor-default"
                   v-for="(sublink, i) in link.sublink"
                   :key="i"
                 >
@@ -186,7 +187,7 @@
       <q-page-container>
         <router-view />
       </q-page-container>
-      <footer class="py-6 mt-4 pt-10 text-white">
+      <footer class="py-6  pt-10 text-white">
         <!-- <p class="text-red-500">This is the footer</p> -->
         <div class="
           wrapper
@@ -359,7 +360,7 @@ li.links {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .mobile_menu {
     position: fixed;
      display: flex;
@@ -394,12 +395,24 @@ li.links {
   transform: translateX(0)
 }
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu_btn,
   .close_btn {
     display: none;
   }
   
+}
+.li_dropdown_link > .router-link-exact-active::after, .li_dropdown_link a:hover::after{
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  width: 40%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: .4em;
+  margin: 0 auto;
+  background-color: yellow;
 }
 </style>
 
@@ -415,12 +428,6 @@ const linksList = [
     link: "/",
   },
   {
-    title: "Company",
-    caption: "github.com/quasarframework",
-    icon: "code",
-    link: "",
-    sublink: [
-      {
         title: "About Us",
         caption: "github.com/quasarframework",
         icon: "code",
@@ -438,19 +445,17 @@ const linksList = [
         icon: "code",
         link: "/company/partnership",
       },
-    ],
-  },
   {
     title: "Our Core Activites",
     caption: "chat.quasar.dev",
     icon: "chat",
-    link: "/company/activities",
+    link: "/our-activities",
   },
   {
     title: "Contact Us",
     caption: "forum.quasar.dev",
     icon: "record_voice_over",
-    link: "https://forum.quasar.dev",
+    link: "/company/contact-us",
   },
 ];
 
