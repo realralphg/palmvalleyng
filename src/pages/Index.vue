@@ -939,7 +939,7 @@ const testimonies = ref([
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 1rem 1rem;
-  min-height: 430px !important;
+  min-height: 400px !important;
   width: 270px;
   transition: all 0.5s ease-in-out;
 }
@@ -961,8 +961,8 @@ const testimonies = ref([
 }
 
 .partner h4 {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
   margin: 0.75rem 0;
 }
 .partner p {
@@ -983,7 +983,7 @@ const testimonies = ref([
   }
 }
 .slide_container {
-  min-height: 35em;
+  min-height: 28em;
   width: 25em;
 }
 

@@ -165,7 +165,7 @@
     <footer class="py-6 pt-10 text-white">
       <!-- <p class="text-red-500">This is the footer</p> -->
       <div
-        class="wrapper text-lg flex flex-wrap sm:grid md:grid-cols-3 sm:grid-cols-2 gap-10 justify-between"
+        class="wrapper text-md flex flex-wrap sm:grid md:grid-cols-3 sm:grid-cols-2 gap-10 justify-between"
       >
         <div>
           <div class="flex my-2 mb-4">
@@ -283,31 +283,31 @@
           </div>
           <div
             @click="$router.push('/company/about-us')"
-            class="q-mt-md cursor-pointer"
+            class="q-mt-sm cursor-pointer"
           >
             <p class="q-ml-sm">About Us</p>
           </div>
           <div
             @click="$router.push('/company/businesses')"
-            class="q-mt-md cursor-pointer"
+            class="q-mt-sm cursor-pointer"
           >
             <p class="q-ml-sm">Our Businesses</p>
           </div>
           <div
             @click="$router.push('/company/partnership')"
-            class="q-mt-md cursor-pointer"
+            class="q-mt-sm cursor-pointer"
           >
             <p class="q-ml-sm">Partnership</p>
           </div>
           <div
             @click="$router.push('/our-activities')"
-            class="q-mt-md cursor-pointer"
+            class="q-mt-sm cursor-pointer"
           >
             <p class="q-ml-sm">Our Core Activities</p>
           </div>
           <div
             @click="$router.push('/company/contact-us')"
-            class="q-mt-md cursor-pointer"
+            class="q-mt-sm cursor-pointer"
           >
             <p class="q-ml-sm">Contact Us</p>
           </div>
