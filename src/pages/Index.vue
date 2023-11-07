@@ -94,7 +94,7 @@
         </div> -->
         <div class="desc_container">
           <h1 class="text-5xl poppins mb-4 font-extrabold">
-            Palm Valley <span class="text-green poppins px-4">NG</span>
+            PalmValley<span class="text-green poppins px-4">NG</span>
           </h1>
           <p class="text-xl dc-con text-gray-800 my-8">
             Providing agricultural solutions to an oil dependent Nigeria.
@@ -179,6 +179,166 @@
               </svg>
             </div>
           </q-btn>
+        </div>
+      </div>
+    </div>
+
+    <div class="curved_green_bg">
+      <div class="wrapper trips">
+        <div class="text-center flex flex-col justify-center items-center">
+          <p
+            class="text-2xl text-white relative poppins mb-4 under_after font-semibold"
+          >
+            PVNL-AGRA Agricultural Transformation Project
+          </p>
+          <p class="text-white text-lg my-2 max-w-8xl">
+            Palm Valley in partnership with Alliance for a Green Revolution in
+            Africa (AGRA) embarks on an Inclusive Agricultural Transformation
+            Project to increase household incomes, financial inclusion, food
+            security and resilience for 50,000 smallholder women and youths in
+            Kaduna and Niger State, Nigeria.
+          </p>
+        </div>
+        <div>
+          <Splide
+            :options="{
+              autoplay: true,
+              rewind: true,
+
+              padding: '5rem',
+              gap: '2rem',
+              arrowPath:
+                'M31.7777 18.4166L17.9207 4.55963L21.5735 0.906799L41.6667 21L21.5735 41.0931L17.9207 37.4403L31.7777 23.5833H0.333344V18.4166H31.7777Z',
+              autoWidth: true,
+              classes: {
+                arrows:
+                  'splide__arrows flex gap-5 mb-10 flex justify-center gap-2',
+                arrow: 'splide__arrow shadow-md rounded small_btn p-4',
+                prev: 'splide__arrow--prev ',
+                next: 'splide__arrow--next ',
+              },
+              focus: 'center',
+              breakpoints: {
+                640: {
+                  perPage: 2,
+                  gap: '.7rem',
+                },
+                480: {
+                  perPage: 3,
+                  gap: '.7rem',
+                  type: 'loop',
+                },
+              },
+            }"
+          >
+            <SplideSlide>
+              <div
+                class="slide_contain slider_height border rounded bg-white shadow-lg p-4"
+              >
+                <q-img
+                  src="/img/sm1.jpeg"
+                  class="shadow-lg slide-img rounded"
+                />
+                <div class="details_container my-4">
+                  <p class="font-semibold text-lg">
+                    Palm Valley's End of Season Training on Harvest and Post
+                    Harvest Processing for Quality Ginger in Kaduna.
+                  </p>
+                </div>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div
+                class="slide_contain slider_height border rounded bg-white shadow-lg p-4"
+              >
+                <q-img
+                  src="/img/sm2.jpeg"
+                  class="shadow-lg slide-img rounded"
+                />
+                <div class="details_container my-4">
+                  <p class="font-semibold q-mb-md text-lg">
+                    Training of Sales and Marketing Ambassadors on Market
+                    Prospecting.
+                  </p>
+
+                  <a
+                    class="q-pa-sm bg-green text-white q-mt-md"
+                    target="_blank"
+                    href="https://www.instagram.com/p/Ck-tdmVtPyF/"
+                    >Read more</a
+                  >
+                </div>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div
+                class="slide_contain slider_height border rounded bg-white shadow-lg p-4"
+              >
+                <q-img
+                  src="/img/sm2.jpeg"
+                  class="shadow-lg slide-img rounded"
+                />
+                <div class="details_container my-4">
+                  <p class="font-semibold q-mb-md text-lg">
+                    AGRA Gender Consortium Pre and Post-Harvest Training of
+                    Trainers and Brown Field Day.
+                  </p>
+
+                  <a
+                    class="q-pa-sm bg-green text-white q-mt-md"
+                    target="_blank"
+                    href="https://www.instagram.com/p/Ck76vj-NeW3/"
+                    >Read more</a
+                  >
+                </div>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div
+                class="slide_contain slider_height border rounded bg-white shadow-lg p-4"
+              >
+                <q-img
+                  src="/img/palm11.jpeg"
+                  class="shadow-lg slide-img rounded"
+                />
+                <div class="details_container my-4">
+                  <p class="font-semibold text-lg">
+                    Seeds on wheels project with East west seeds
+                  </p>
+                </div>
+              </div>
+            </SplideSlide>
+
+            <SplideSlide>
+              <div
+                class="slide_contain border slider_height rounded bg-white shadow-lg p-4"
+              >
+                <q-img
+                  src="/img/palm33.jpeg"
+                  class="shadow-lg slide-img rounded"
+                />
+                <div class="details_container my-4">
+                  <p class="font-semibold text-lg">
+                    Farmers Greenfield day at ginger Demo Plot in kachia
+                  </p>
+                </div>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div class="slide_contain border rounded bg-white shadow-lg p-4">
+                <q-img
+                  src="/img/palm55.jpeg"
+                  class="shadow-lg slide-img rounded"
+                />
+                <div class="details_container my-4">
+                  <p class="font-semibold text-lg">
+                    The inauguration of the ocp ultra modern fertilizer blending
+                    plant and center of excellence.
+                  </p>
+                </div>
+              </div>
+            </SplideSlide>
+          </Splide>
         </div>
       </div>
     </div>
@@ -822,7 +982,7 @@ const metaData = {
 useMeta(metaData);
 const images = reactive([
   {
-    img: "/img/img1.png",
+    img: "/img/img1.jpeg",
     status: "active",
   },
   {
@@ -884,17 +1044,22 @@ const services = ref([
   {
     img: "/img/Eyes.svg",
     title: "Vision",
-    desc: "To Provide agricultural solutions to an oil dependent Nigeria",
+    desc: "Improved and sustainable standard of living for Women and Youth in Rural Communities of Nigeria.",
   },
   {
     img: "/img/optical.svg",
     title: "Mission",
-    desc: "To provide Business Support to the vulnerable group in the VC which are mainly women and youth",
+    desc: "Empowering Rural Communities Through the provision of embedded support services and improved access to markets for women and children.",
   },
   {
     img: "/img/tilda.svg",
-    title: "Core Value",
-    desc: " Building business relationships and linkages to financial institutions, input, and out markets as well as forward integration.",
+    title: "Core Values",
+    desc: " Integrity, Transparency, Collaboration, Excellence.",
+  },
+  {
+    img: "/img/dots.svg",
+    title: "Key Activities",
+    desc: "  Agribusiness, Access to finance, Access to markets, Training and capacity building, Gender mainstreaming, Extension services.",
   },
 ]);
 // const partners = ref([
@@ -910,17 +1075,22 @@ const slides = ref([
   {
     img: "/img/slide1.png",
     title: "Vision",
-    desc: "To Provide agricultural solutions to an oil dependent Nigeria",
+    desc: "Improved and sustainable standard of living for Women and Youth in Rural Communities of Nigeria.",
   },
   {
     img: "/img/slide2.png",
     title: "Mission",
-    desc: "To provide Business Support to the vulnerable group in the VC which are mainly women and youth",
+    desc: "Empowering Rural Communities Through the provision of embedded support services and improved access to markets for women and children.",
   },
   {
     img: "/img/slide3.png",
-    title: "Core Value",
-    desc: " Building business relationships and linkages to financial institutions, input, and out markets as well as forward integration.",
+    title: "Core Values",
+    desc: " Integrity, Transparency, Collaboration, Excellence.",
+  },
+  {
+    img: "/img/slide3.png",
+    title: "Key Activities",
+    desc: " Agribusiness, Access to finance, Access to markets, Training and capacity building, Gender mainstreaming, Extension services.",
   },
 ]);
 const testimonies = ref([
@@ -984,6 +1154,10 @@ const testimonies = ref([
 }
 .slide_container {
   min-height: 35em;
+  width: 25em;
+}
+.slide_contain {
+  min-height: 28em;
   width: 25em;
 }
 

@@ -217,7 +217,7 @@
               <div>
                 <a
                   class="text-white text-center"
-                  href="https://www.facebook.com/manzo.maigari"
+                  href=""
                   target="_blank"
                 >
                   <i
@@ -233,7 +233,7 @@
 
                 <a
                   class="text-white text-center"
-                  href="https://www.facebook.com/manzo.maigari"
+                  href=""
                   target="_blank"
                 >
                   <i
@@ -244,7 +244,7 @@
 
                 <a
                   class="text-white text-center"
-                  href="https://www.facebook.com/manzo.maigari"
+                  href=""
                   target="_blank"
                 >
                   <i
@@ -320,7 +320,7 @@
               outline
               icon="mail"
               type="a"
-              href="https://www.manzomaigari.com/webmail/"
+              href="https://www.palmvalleyng.com/webmail/"
               target="_blank"
             >
               <span class="q-pl-sm">Check Mail</span>
