@@ -84,13 +84,13 @@
         <!-- <div class="relative mb-40 md:order-last">
            <div class=" big border shadow-lg rounded">
             <img class="transition ease-in-out delay-150  overflow-hidden shadow-md rounded transform hover:-translate-y-2" :src="bigImg"/>
-          </div> 
-          
+          </div>
+
           <div class="small_img_container ">
             <div v-for="(img, index) in images" :key="index" @click="switchImg(index)" class="small_img transition ease-in-out delay-150  overflow-hidden shadow-md rounded transform hover:-translate-y-2"><img :src="img" />
             </div>
           </div>
-          
+
         </div> -->
         <div class="desc_container">
           <h1 class="text-5xl poppins mb-4 font-extrabold">
@@ -342,6 +342,318 @@
         </div>
       </div>
     </div>
+    <section class="projects-section">
+      <div class="projects-wrap agra container">
+        <div class="left">
+          <h2
+            class="text-h5 text-md-h4 font-weight-light pt-8 grey--text text--darken-3"
+          >
+            AGRA
+          </h2>
+          <p
+            class="grey--text text--darken-3 text-body-1 text-md-h6 font-weight-light"
+          >
+            Palm Valley Nigeria Limited in partnership with Alliance for a Green
+            Revolution in Africa (AGRA) embarks on an Inclusive Agricultural
+            Transformation Project to increase household incomes, financial
+            inclusion, food security and resilience for 50,000 smallholder women
+            and youths in Kaduna and Niger State, Nigeria. Specific objectives
+            include; Increase productivity for women smallholder farmers in
+            Niger and Kaduna States, Strengthened and expanded women"s access to
+            output markets and Increased capacity of small holder farming
+            households and agricultural systems to better prepare for and adapt
+            to shocks and stress.
+          </p>
+        </div>
+        <div class="right">
+          <div class="image-grid">
+            <div class="image-row">
+              <div class="image image-01">
+                <img src="~/assets/img/agra1.jpg" alt="" />
+              </div>
+              <div class="image image-02">
+                <img src="~/assets/img/agra2.jpg" alt="" />
+              </div>
+              <div class="image image-03">
+                <img src="~/assets/img/agra3.jpg" alt="" />
+              </div>
+            </div>
+            <div class="image-row">
+              <div class="image image-04">
+                <img src="~/assets/img/agra4.jpg" alt="" />
+              </div>
+              <div class="image image-05">
+                <img src="~/assets/img/agra5.jpg" alt="" />
+              </div>
+              <div class="image image-06">
+                <img src="~/assets/img/agra6.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects-section">
+      <div class="projects-wrap ocp side container">
+        <div class="right">
+          <div class="image-grid">
+            <div class="image-row">
+              <div class="image image-01">
+                <img src="~/assets/img/ocp1.jpg" alt="" />
+              </div>
+              <div class="image image-02">
+                <img src="~/assets/img/ocp2.jpg" alt="" />
+              </div>
+              <div class="image image-03">
+                <img src="~/assets/img/ocp3.jpg" alt="" />
+              </div>
+            </div>
+            <div class="image-row">
+              <div class="image image-04">
+                <img src="~/assets/img/ocp4.jpg" alt="" />
+              </div>
+              <div class="image image-05">
+                <img src="~/assets/img/ocp5.jpg" alt="" />
+              </div>
+              <div class="image image-06">
+                <img src="~/assets/img/ocp5.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="left">
+          <h2
+            class="text-h5 text-md-h4 font-weight-light pt-8 grey--text text--darken-3"
+          >
+            OCP AFRICA AND PALM ALLEY & AGROLOG
+          </h2>
+          <p
+            class="grey--text text--darken-3 text-body-1 text-md-h6 font-weight-light"
+          >
+            Palm Valley Nigeria Limited partners with OCP Africa and Agrolog
+            Limited on an Agribooster initiative aimed at revolutionizing ginger
+            farming in Kachia, Kaduna state. This strategic alliance marries OCP
+            Fertilizers' expertise in cutting-edge agricultural solutions with
+            Palm Valley's unwavering commitment to community empowerment, and
+            Agrolog's dedication to sustainable farming practices. The
+            collective mission is singular and resolute: to elevate the
+            productivity and quality of ginger farming, enhance the lives of
+            local farmers, and champion the adoption of environmentally
+            sustainable agricultural methodologies. With a shared vision for a
+            thriving, sustainable agricultural landscape, this partnership
+            aspires to spark a transformative wave in Kachia, Kaduna, and
+            beyond.
+          </p>
+        </div>
+      </div>
+      .
+    </section>
+
+    <section class="projects-section">
+      <div class="projects-wrap wofan container">
+        <div class="left">
+          <h2
+            class="text-h5 text-md-h4 font-weight-light pt-8 grey--text text--darken-3"
+          >
+            WOFAN ICON2 PROJECT
+          </h2>
+          <p
+            class="grey--text text--darken-3 text-body-1 text-md-h6 font-weight-light"
+          >
+            The Women Farmers Advancement Network (WOFAN) in collaboration with
+            Palm Valley Nigeria Limited is implementing the WOFAN ICON2 project
+            powered by Mastercard Foundation. The project is strategically
+            designed to drive sustainable agricultural growth and economic
+            development in Benue, Nasarawa, and Kaduna States in Nigeria. ICON2
+            aims to strengthen agricultural enterprise value chains, generate
+            employment opportunities, and enhance income for women and youth
+            farmers and processors. With a focus on fostering a positive
+            perception of agriculture as a viable source of income, the project
+            seeks to improve access to financial products and services for
+            individual farmers through cooperative structures.
+          </p>
+        </div>
+        <div class="right">
+          <div class="image-grid">
+            <div class="image-row">
+              <div class="image image-01">
+                <img src="~/assets/img/wof1.jpg" alt="" />
+              </div>
+              <div class="image image-02">
+                <img src="~/assets/img/wof2.jpg" alt="" />
+              </div>
+              <div class="image image-03">
+                <img src="~/assets/img/wof3.jpg" alt="" />
+              </div>
+            </div>
+            <div class="image-row">
+              <div class="image image-04">
+                <img src="~/assets/img/wof4.jpg" alt="" />
+              </div>
+              <div class="image image-05">
+                <img src="~/assets/img/wof5.jpg" alt="" />
+              </div>
+              <div class="image image-06">
+                <img src="~/assets/img/wof6.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects-section q-pt-xl">
+      <div class="container text-center text-h5 text-weight-bold q-pb-md">
+        Strategically enhance agricultural productivity and provide increased
+        access to credit and markets for women and smallholder farmers in
+        Nigerian rural communities.
+      </div>
+      <div>
+        <Splide
+          :options="{
+            autoplay: true,
+            rewind: true,
+
+            padding: '5rem',
+            gap: '2rem',
+            arrowPath:
+              'M31.7777 18.4166L17.9207 4.55963L21.5735 0.906799L41.6667 21L21.5735 41.0931L17.9207 37.4403L31.7777 23.5833H0.333344V18.4166H31.7777Z',
+            autoWidth: true,
+            classes: {
+              arrows:
+                'splide__arrows flex gap-5 mb-10 flex justify-center gap-2',
+              arrow: 'splide__arrow shadow-md rounded small_btn p-4',
+              prev: 'splide__arrow--prev ',
+              next: 'splide__arrow--next ',
+            },
+            focus: 'center',
+            breakpoints: {
+              640: {
+                perPage: 2,
+                gap: '.7rem',
+              },
+              480: {
+                perPage: 3,
+                gap: '.7rem',
+                type: 'loop',
+              },
+            },
+          }"
+        >
+          <SplideSlide v-for="(img, index) in carousel" :key="index">
+            <div
+              class="slide_contain carou border rounded bg-white shadow-lg p-4"
+            >
+              <!-- {{ img.img }} -->
+              <q-img :src="img.img" class="shadow-lg slide-img rounded" />
+            </div>
+          </SplideSlide>
+        </Splide>
+      </div>
+    </section>
+    <section class="projects-section">
+      <div class="partnerr training">
+        <Splide
+          :options="{
+            padding: '5rem',
+            gap: '2rem',
+            autoplay: true,
+
+            arrowPath:
+              'M31.7777 18.4166L17.9207 4.55963L21.5735 0.906799L41.6667 21L21.5735 41.0931L17.9207 37.4403L31.7777 23.5833H0.333344V18.4166H31.7777Z',
+            autoWidth: true,
+            classes: {
+              arrows:
+                'splide__arrows flex gap-5 mb-10 flex justify-center gap-2',
+              arrow: 'splide__arrow shadow-md rounded small_btn p-4',
+              prev: 'splide__arrow--prev ',
+              next: 'splide__arrow--next ',
+            },
+            focus: 'center',
+            breakpoints: {
+              640: {
+                perPage: 2,
+                gap: '.7rem',
+              },
+              480: {
+                perPage: 3,
+                gap: '.7rem',
+                type: 'loop',
+              },
+            },
+          }"
+        >
+          <SplideSlide>
+            <div class="partner slide_container slider_height">
+              <div class="women"><img src="/img/s1.jpg" alt="" /></div>
+
+              <h4 class="text-h6 text-weight-bold">
+                Mbakukwa Youth Development Association Cooperative Transplanting
+                in their Demo Farm Plot
+              </h4>
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div class="partner slide_container slider_height">
+              <div class="women"><img src="/img/s2.jpg" alt="" /></div>
+
+              <h4 class="text-h6 text-weight-bold">
+                Farmers Field Day at Zonkwa, Zangon Kataf
+              </h4>
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div class="partner slide_container slider_height">
+              <div class="women"><img src="/img/s3.jpg" alt="" /></div>
+
+              <h4 class="text-h6 text-weight-bold">
+                Farmers Field Day at Manchok, Kaura, to expose community
+                partners to new tehnologies in rice production
+              </h4>
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div class="partner slide_container slider_height">
+              <div class="women"><img src="/img/s4.jpg" alt="" /></div>
+
+              <h4 class="text-h6 text-weight-bold">
+                Farmers Field Day at Manchok, Kaura, to expose community
+                partners to new tehnologies in rice production
+              </h4>
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div class="partner slide_container slider_height">
+              <div class="women"><img src="/img/sfive.jpg" alt="" /></div>
+
+              <h4 class="text-h6 text-weight-bold">
+                Market Linkage training on negotiation, marketing and pricing
+                skills in Kaduna state
+              </h4>
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div class="partner slide_container slider_height">
+              <div class="women"><img src="/img/sSix.jpg" alt="" /></div>
+
+              <h4 class="text-h6 text-weight-bold">
+                Market Linkage training on negotiation, marketing and pricing
+                skills in Benue state
+              </h4>
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div class="partner slide_container slider_height">
+              <div class="women"><img src="/img/s7.jpg" alt="" /></div>
+
+              <h4 class="text-h6 text-weight-bold">
+                Market Linkage training on negotiation, marketing and pricing
+                skills in Nasarawa state
+              </h4>
+            </div>
+          </SplideSlide>
+        </Splide>
+      </div>
+    </section>
     <div class="world_bg">
       <div
         class="wrapper flex gap-10 py-10 justify-evenly items-center flex-wrap"
@@ -1040,6 +1352,47 @@ const blogs = ref([
     desc: "High-tech farming in Canada...",
   },
 ]);
+const carousel = ref([
+  {
+    img: "/img/carou1.jpg",
+  },
+  {
+    img: "/img/carou2.jpg",
+  },
+  {
+    img: "/img/carou3.jpg",
+  },
+  {
+    img: "/img/carou4.jpg",
+  },
+  {
+    img: "/img/carou5.jpg",
+  },
+  {
+    img: "/img/carou6.jpg",
+  },
+  {
+    img: "/img/carou7.jpg",
+  },
+  {
+    img: "/img/carou8.jpg",
+  },
+  {
+    img: "/img/carou9.jpg",
+  },
+  {
+    img: "/img/carou10.jpg",
+  },
+  {
+    img: "/img/carou11.jpg",
+  },
+  {
+    img: "/img/carou12.jpg",
+  },
+  {
+    img: "/img/carou13.jpg",
+  },
+]);
 const services = ref([
   {
     img: "/img/Eyes.svg",
@@ -1114,6 +1467,19 @@ const testimonies = ref([
   transition: all 0.5s ease-in-out;
 }
 
+.training {
+  margin-top: 7rem;
+
+  h4 {
+    font-size: 18px !important;
+    line-height: 1.2;
+  }
+
+  .partner {
+    min-height: 400px !important;
+  }
+}
+
 .women {
   margin-bottom: 0.95rem;
 }
@@ -1160,6 +1526,9 @@ const testimonies = ref([
   min-height: 28em;
   width: 25em;
 }
+.slide_contain.carou {
+  min-height: auto;
+}
 
 .slide_text {
   height: 95px;
@@ -1202,19 +1571,10 @@ const testimonies = ref([
 .main_center {
   margin: 4em 0;
 }
-.desc_container {
-  // max-width: 500px;
-}
+
 .dc-con {
   padding: 0 3rem 0 0;
 }
-
-// .img_container {
-//   max-width: 30em;
-//   img {
-//     width: 100%;
-//   }
-// }
 
 .flexx {
   display: flex;
@@ -1234,6 +1594,273 @@ const testimonies = ref([
   width: 100%;
   height: 500px;
   object-fit: contain;
+}
+
+// additions
+.projects-section {
+  margin: 2rem 0;
+}
+.projects-section .left h2 {
+  position: relative;
+  font-weight: 700;
+}
+
+.projects-wrap {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 2rem;
+  // place-items: center;
+  align-items: center;
+}
+.projects-wrap.side {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  gap: 2rem;
+  // place-items: center;
+  align-items: center;
+}
+.projects-section .left p {
+  font-size: 1rem;
+}
+.projects-wrap-two {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  // place-items: center;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .projects-wrap-two {
+    // display: grid;
+    // grid-template-columns: 1fr;
+    gap: 2rem;
+    // place-items: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .flexer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .projects-wrap-two .left {
+    order: 1;
+    width: 100%;
+  }
+  .projects-wrap-two .right {
+    order: 2;
+    text-align: center;
+  }
+  .projects-wrap .left {
+    order: 1;
+    text-align: center;
+  }
+  .projects-wrap .right {
+    order: 2;
+    text-align: center;
+  }
+
+  .projects-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    // place-items: center;
+  }
+}
+
+// .projects-wrap h2::after,
+// .projects-wrap-two h2::after {
+//   display: block;
+//   height: 2px;
+//   width: 100px;
+//   background-color: #009432;
+//   content: " ";
+//   margin: 0 auto;
+//   margin-bottom: 30px;
+//   position: absolute;
+//   left: 50%;
+//   transform: translateX(-50%);
+// }
+.projects-wrap h2,
+.projects-wrap-two h2 {
+  margin: 1rem auto;
+  font-weight: 500;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #424242 !important;
+  caret-color: #424242 !important;
+  font-weight: 300;
+}
+
+.image-grid img {
+  object-fit: cover !important;
+  width: 100%;
+}
+.image-grid img:hover {
+  transform: scale(1.1);
+  transition: 0.45s ease-in-out;
+  cursor: pointer;
+}
+
+.image-row {
+  display: flex;
+}
+
+.image-row .image {
+  margin: 12px;
+  height: 240px;
+}
+.image-row .image:hover {
+  transform: scale(1.1);
+  transition: 0.45s ease-in-out;
+  cursor: pointer;
+}
+
+.image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.image-01 {
+  // background-image: url("../assets/img/agra1.jpg");
+  flex: 1;
+}
+
+.image-02 {
+  // background-image: url("../assets/BenueRice4.jpg");
+  flex: 1;
+}
+
+.image-03 {
+  // background-image: url("../assets/BenueRice5.jpg");
+  flex: 1;
+}
+
+.image-04 {
+  // background-image: url("../assets/BenueRice6.jpg");
+  flex: 1;
+}
+
+.image-05 {
+  flex: 3;
+}
+
+.image-07 {
+  // background-image: url("../assets/BenueRice7.jpg");
+  flex: 3;
+}
+
+.projects-wrap .image-grid img {
+  object-fit: cover !important;
+  width: 100%;
+  height: 100%;
+}
+.projects-wrap .image-grid img:hover {
+  transform: scale(1.1);
+  transition: 0.45s ease-in-out;
+  cursor: pointer;
+}
+
+.projects-wrap .image-row {
+  display: flex;
+}
+
+.projects-wrap .image-row .image {
+  margin: 5px;
+  height: 170px;
+}
+.projects-wrap .image-row .image:hover {
+  transform: scale(1.1);
+  transition: 0.45s ease-in-out;
+  cursor: pointer;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.projects-wrap .image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.projects-wrap .image-01 {
+  // background-image: url("../assets/Manzo3.png");
+  flex: 3;
+}
+
+.projects-wrap .image-02 {
+  // background-image: url("../assets/Manzo33.png");
+  flex: 2;
+}
+
+.projects-wrap .image-03 {
+  // background-image: url("../assets/manzo333.png");
+  flex: 2;
+}
+
+.projects-wrap .image-04 {
+  // background-image: url("../assets/HungaroSeed.png");
+  flex: 2;
+}
+
+.projects-wrap .image-05 {
+  // background-image: url("../assets/Tetra.png");
+  flex: 2;
+}
+
+.image-06 {
+  // background-image: url("../assets/Alphavet.png");
+  flex: 3;
+}
+
+.projects-wrap .image-07 {
+  // background-image: url("../assets/BenueRice7.jpg");
+  flex: 2;
+}
+
+@media screen and (max-width: 600px) {
+  .image-row {
+    flex-direction: column;
+  }
+  .image-01 {
+    // background-image: url("../assets/rice1.jpg");
+    flex: 2;
+  }
+
+  .image-row .image {
+    flex-basis: auto;
+  }
+
+  .projects-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-wrap.side {
+    grid-template-columns: 1fr;
+  }
+
+  .text-h5 {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+  .partner h4 {
+    line-height: 1.3;
+    font-size: 16px !important;
+  }
+  .training .partner {
+    min-height: 350px !important;
+  }
 }
 
 @media (max-width: 800px) {
