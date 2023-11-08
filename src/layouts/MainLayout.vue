@@ -52,6 +52,14 @@
                 <!-- <div class></div> -->
               </ul>
             </li>
+            <li class="li_dropdown_link relative py-2">
+              <a
+                class="text-weight-bold"
+                target="_blank"
+                href="https://palmip.netlify.app/login"
+                >Palm IP</a
+              >
+            </li>
           </ul>
         </nav>
         <!-- <ul class="desktop_nav flex flex-nowrap link_list justify-end">
@@ -140,21 +148,22 @@
         <ul
           class="flex link_list mx-auto justify-center items-center gap-5 flex-col"
         >
-          <li>
+          <!-- <li>
             <q-btn
               flat
               class="sigin_btn mr-2 px-4 text-green border border-green rounded font-medium p-2"
             >
               Sign In
             </q-btn>
-          </li>
-          <li>
-            <q-btn
-              flat
+          </li> -->
+          <li class="q-mt-md">
+            <a
+              target="_blank"
+              href="https://palmip.netlify.app/"
               class="register_btn mr-2 px-6 bg-yellow rounded text-black font-medium p-2"
             >
-              Register
-            </q-btn>
+              Palm IP
+            </a>
           </li>
         </ul>
       </div>
@@ -215,11 +224,7 @@
             </li>
             <li class="flex mb-4">
               <div>
-                <a
-                  class="text-white text-center"
-                  href=""
-                  target="_blank"
-                >
+                <a class="text-white text-center" href="" target="_blank">
                   <i
                     style="font-size: 2em"
                     class="ri-facebook-fill px-2 text-yellow"
@@ -231,22 +236,14 @@
                   /> -->
                 </a>
 
-                <a
-                  class="text-white text-center"
-                  href=""
-                  target="_blank"
-                >
+                <a class="text-white text-center" href="" target="_blank">
                   <i
                     style="font-size: 2em"
                     class="ri-linkedin-fill px-2 text-yellow"
                   ></i>
                 </a>
 
-                <a
-                  class="text-white text-center"
-                  href=""
-                  target="_blank"
-                >
+                <a class="text-white text-center" href="" target="_blank">
                   <i
                     style="font-size: 2em"
                     class="ri-twitter-fill px-2 text-yellow"
@@ -383,7 +380,7 @@ li.links {
     transform: translateX(0);
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .menu_btn,
   .close_btn {
     display: none;

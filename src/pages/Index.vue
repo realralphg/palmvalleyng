@@ -1,188 +1,33 @@
 <template>
   <q-page>
-    <div class="wrapper">
-      <div
-        class="flex flexer justify-between md:flex-nowrap my-10 mt-4 main_center flex-center"
+    <div class="carouDiv">
+      <q-carousel
+        animated
+        v-model="slide"
+        navigation
+        infinite
+        autoplay
+        transition-prev="slide-right"
+        transition-next="slide-left"
       >
-        <div style="flex: 1" class="big relative mb-40 md:order-last">
-          <q-img
-            no-native-menu
-            :src="bigImg.img"
-            spinner-color="red"
-            class="absolute-full transition relative ease-in-out border delay-150 overflow-hidden shadow-lg rounded transform hover:-translate-y-2"
-          >
-            <template v-slot:error>
-              <div
-                class="absolute-full flex flex-center bg-negative text-white"
-              >
-                Cannot load image
-              </div>
-            </template>
-          </q-img>
-          <div>
-            <div class="small_img_container">
-              <div
-                v-for="(img, index) in imgByStatus"
-                :key="index"
-                :class="img.size"
-                class="small_img transition ease-in-out delay-150 overflow-hidden shadow-md rounded transform hover:-translate-y-2"
-              >
-                <img :src="img.img" />
-              </div>
-            </div>
-            <div class="mt-24 arrow_container mb-30 flex justify-center gap-2">
-              <q-btn
-                class="flex justify-between items-center p-3 rounded small_btn text-yellow font-medium"
-                @click="switchImage('-')"
-              >
-                <div class="">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20 12.2744C20 12.6541 19.7178 12.9679 19.3518 13.0176L19.25 13.0244L4.25 13.0244C3.8358 13.0244 3.5 12.6886 3.5 12.2744C3.5 11.8947 3.7822 11.5809 4.1482 11.5313L4.25 11.5244L19.25 11.5244C19.6642 11.5244 20 11.8602 20 12.2744Z"
-                      fill="#FFD600"
-                    />
-                    <path
-                      d="M10.829 17.7673C11.1225 18.0596 11.1235 18.5344 10.8313 18.828C10.5656 19.0948 10.149 19.1199 9.85492 18.9027L9.77062 18.8302L3.72062 12.8062C3.45302 12.5397 3.42862 12.1216 3.64762 11.8276L3.72062 11.7433L9.77062 5.71832C10.0641 5.42602 10.5389 5.42702 10.8312 5.72052C11.0969 5.98732 11.1203 6.40412 10.9018 6.69722L10.829 6.78122L5.31301 12.2751L10.829 17.7673Z"
-                      fill="#FFD600"
-                    />
-                  </svg>
-                </div>
-              </q-btn>
-              <q-btn
-                class="flex justify-between items-center p-3 rounded small_btn text-yellow font-medium"
-                @click="switchImage('+')"
-              >
-                <div class="">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4 11.7256C4 11.3459 4.28215 11.0321 4.64823 10.9824L4.75 10.9756H19.75C20.1642 10.9756 20.5 11.3114 20.5 11.7256C20.5 12.1053 20.2178 12.4191 19.8518 12.4687L19.75 12.4756L4.75 12.4756C4.33579 12.4756 4 12.1398 4 11.7256Z"
-                      fill="#FFD600"
-                    />
-                    <path
-                      d="M13.171 6.23271C12.8775 5.94045 12.8765 5.46558 13.1687 5.17206C13.4344 4.90522 13.851 4.88012 14.1451 5.09734L14.2294 5.16977L20.2794 11.1938C20.547 11.4603 20.5714 11.8784 20.3524 12.1724L20.2794 12.2567L14.2294 18.2817C13.9359 18.574 13.4611 18.573 13.1688 18.2795C12.9031 18.0127 12.8797 17.5959 13.0982 17.3028L13.171 17.2188L18.687 11.7249L13.171 6.23271Z"
-                      fill="#FFD600"
-                    />
-                  </svg>
-                </div>
-              </q-btn>
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="relative mb-40 md:order-last">
-           <div class=" big border shadow-lg rounded">
-            <img class="transition ease-in-out delay-150  overflow-hidden shadow-md rounded transform hover:-translate-y-2" :src="bigImg"/>
-          </div>
-
-          <div class="small_img_container ">
-            <div v-for="(img, index) in images" :key="index" @click="switchImg(index)" class="small_img transition ease-in-out delay-150  overflow-hidden shadow-md rounded transform hover:-translate-y-2"><img :src="img" />
-            </div>
-          </div>
-
-        </div> -->
-        <div class="desc_container">
-          <h1 class="text-5xl poppins mb-4 font-extrabold">
-            PalmValley<span class="text-green poppins px-4">NG</span>
-          </h1>
-          <p class="text-xl dc-con text-gray-800 my-8">
-            Providing agricultural solutions to an oil dependent Nigeria.
-            Nigeria has as much arable lands as it has oil. A country with a
-            mass population of youth in urban and rural areas. Our goal is to
-            promote Agricultural practice over oil and leverage the abundance of
-            youth and commerce to grow a new agribusiness economy.
-          </p>
-          <!-- <q-btn
-            class="flex justify-between items-center p-3 rounded bg_btn text-yellow font-medium"
-          >
-            <span>Create a free account</span>
-            <div class="ml-4">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 11.7256C4 11.3459 4.28215 11.0321 4.64823 10.9824L4.75 10.9756H19.75C20.1642 10.9756 20.5 11.3114 20.5 11.7256C20.5 12.1053 20.2178 12.4191 19.8518 12.4687L19.75 12.4756L4.75 12.4756C4.33579 12.4756 4 12.1398 4 11.7256Z"
-                  fill="#FFD600"
-                />
-                <path
-                  d="M13.171 6.23271C12.8775 5.94045 12.8765 5.46558 13.1687 5.17206C13.4344 4.90522 13.851 4.88012 14.1451 5.09734L14.2294 5.16977L20.2794 11.1938C20.547 11.4603 20.5714 11.8784 20.3524 12.1724L20.2794 12.2567L14.2294 18.2817C13.9359 18.574 13.4611 18.573 13.1688 18.2795C12.9031 18.0127 12.8797 17.5959 13.0982 17.3028L13.171 17.2188L18.687 11.7249L13.171 6.23271Z"
-                  fill="#FFD600"
-                />
-              </svg>
-            </div>
-          </q-btn> -->
-        </div>
-      </div>
+        <q-carousel-slide
+          v-for="(img, index) in carousel"
+          :key="index"
+          :name="index + 1"
+          :img-src="img.img"
+        />
+      </q-carousel>
       <div
-        class="flex flexer justify-between md:flex-nowrap my-10 gap-10 flex-center"
+        style="max-width: 800px; margin: 0 auto"
+        class="container carouText text-center text-h5 text-weight-bold q-pb-md"
       >
-        <iframe
-          style="flex: 1"
-          width="100%"
-          height="315"
-          src="https://www.youtube.com/embed/1OkFqF85y4Q"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <!-- <img src="../assets/img/group.png" /> -->
-
-        <div style="flex: 1" class="desc_container my-5">
-          <p
-            class="text-2xl text-green relative poppins mb-4 under_after font-semibold"
-          >
-            Our <span class="text-yellow-500">Identity</span>
-          </p>
-          <p class="text-lg my-4">
-            Palm Valley Nigeria Limited (PVNL) is a limited liability company
-            registered under the company Allied Matters Act of 1990 with RC No
-            792177. The company was established in 2008 with the vision of
-            providing agricultural solutions to an oil dependent Nigeria...
-          </p>
-          <q-btn
-            to="/company/about-us"
-            class="flex btn justify-between items-center p-3 rounded bg_btn text-yellow font-medium"
-          >
-            <span>Read More</span>
-            <div class="ml-4">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 11.7256C4 11.3459 4.28215 11.0321 4.64823 10.9824L4.75 10.9756H19.75C20.1642 10.9756 20.5 11.3114 20.5 11.7256C20.5 12.1053 20.2178 12.4191 19.8518 12.4687L19.75 12.4756L4.75 12.4756C4.33579 12.4756 4 12.1398 4 11.7256Z"
-                  fill="#FFD600"
-                />
-                <path
-                  d="M13.171 6.23271C12.8775 5.94045 12.8765 5.46558 13.1687 5.17206C13.4344 4.90522 13.851 4.88012 14.1451 5.09734L14.2294 5.16977L20.2794 11.1938C20.547 11.4603 20.5714 11.8784 20.3524 12.1724L20.2794 12.2567L14.2294 18.2817C13.9359 18.574 13.4611 18.573 13.1688 18.2795C12.9031 18.0127 12.8797 17.5959 13.0982 17.3028L13.171 17.2188L18.687 11.7249L13.171 6.23271Z"
-                  fill="#FFD600"
-                />
-              </svg>
-            </div>
-          </q-btn>
+        <div>
+          Strategically enhance agricultural productivity and provide increased
+          access to credit and markets for women and smallholder farmers in
+          Nigerian rural communities.
         </div>
       </div>
     </div>
-
     <div class="curved_green_bg">
       <div class="wrapper trips">
         <div class="text-center flex flex-col justify-center items-center">
@@ -204,7 +49,6 @@
             :options="{
               autoplay: true,
               rewind: true,
-
               padding: '5rem',
               gap: '2rem',
               arrowPath:
@@ -342,112 +186,6 @@
         </div>
       </div>
     </div>
-    <section class="projects-section">
-      <div class="projects-wrap agra container">
-        <div class="left">
-          <h2
-            class="text-h5 text-md-h4 font-weight-light pt-8 grey--text text--darken-3"
-          >
-            AGRA
-          </h2>
-          <p
-            class="grey--text text--darken-3 text-body-1 text-md-h6 font-weight-light"
-          >
-            Palm Valley Nigeria Limited in partnership with Alliance for a Green
-            Revolution in Africa (AGRA) embarks on an Inclusive Agricultural
-            Transformation Project to increase household incomes, financial
-            inclusion, food security and resilience for 50,000 smallholder women
-            and youths in Kaduna and Niger State, Nigeria. Specific objectives
-            include; Increase productivity for women smallholder farmers in
-            Niger and Kaduna States, Strengthened and expanded women"s access to
-            output markets and Increased capacity of small holder farming
-            households and agricultural systems to better prepare for and adapt
-            to shocks and stress.
-          </p>
-        </div>
-        <div class="right">
-          <div class="image-grid">
-            <div class="image-row">
-              <div class="image image-01">
-                <img src="~/assets/img/agra1.jpg" alt="" />
-              </div>
-              <div class="image image-02">
-                <img src="~/assets/img/agra2.jpg" alt="" />
-              </div>
-              <div class="image image-03">
-                <img src="~/assets/img/agra3.jpg" alt="" />
-              </div>
-            </div>
-            <div class="image-row">
-              <div class="image image-04">
-                <img src="~/assets/img/agra4.jpg" alt="" />
-              </div>
-              <div class="image image-05">
-                <img src="~/assets/img/agra5.jpg" alt="" />
-              </div>
-              <div class="image image-06">
-                <img src="~/assets/img/agra6.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="projects-section">
-      <div class="projects-wrap ocp side container">
-        <div class="right">
-          <div class="image-grid">
-            <div class="image-row">
-              <div class="image image-01">
-                <img src="~/assets/img/ocp1.jpg" alt="" />
-              </div>
-              <div class="image image-02">
-                <img src="~/assets/img/ocp2.jpg" alt="" />
-              </div>
-              <div class="image image-03">
-                <img src="~/assets/img/ocp3.jpg" alt="" />
-              </div>
-            </div>
-            <div class="image-row">
-              <div class="image image-04">
-                <img src="~/assets/img/ocp4.jpg" alt="" />
-              </div>
-              <div class="image image-05">
-                <img src="~/assets/img/ocp5.jpg" alt="" />
-              </div>
-              <div class="image image-06">
-                <img src="~/assets/img/ocp5.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="left">
-          <h2
-            class="text-h5 text-md-h4 font-weight-light pt-8 grey--text text--darken-3"
-          >
-            OCP AFRICA AND PALM ALLEY & AGROLOG
-          </h2>
-          <p
-            class="grey--text text--darken-3 text-body-1 text-md-h6 font-weight-light"
-          >
-            Palm Valley Nigeria Limited partners with OCP Africa and Agrolog
-            Limited on an Agribooster initiative aimed at revolutionizing ginger
-            farming in Kachia, Kaduna state. This strategic alliance marries OCP
-            Fertilizers' expertise in cutting-edge agricultural solutions with
-            Palm Valley's unwavering commitment to community empowerment, and
-            Agrolog's dedication to sustainable farming practices. The
-            collective mission is singular and resolute: to elevate the
-            productivity and quality of ginger farming, enhance the lives of
-            local farmers, and champion the adoption of environmentally
-            sustainable agricultural methodologies. With a shared vision for a
-            thriving, sustainable agricultural landscape, this partnership
-            aspires to spark a transformative wave in Kachia, Kaduna, and
-            beyond.
-          </p>
-        </div>
-      </div>
-      .
-    </section>
 
     <section class="projects-section">
       <div class="projects-wrap wofan container">
@@ -501,55 +239,113 @@
         </div>
       </div>
     </section>
-    <section class="projects-section q-pt-xl">
-      <div class="container text-center text-h5 text-weight-bold q-pb-md">
-        Strategically enhance agricultural productivity and provide increased
-        access to credit and markets for women and smallholder farmers in
-        Nigerian rural communities.
-      </div>
-      <div>
-        <Splide
-          :options="{
-            autoplay: true,
-            rewind: true,
 
-            padding: '5rem',
-            gap: '2rem',
-            arrowPath:
-              'M31.7777 18.4166L17.9207 4.55963L21.5735 0.906799L41.6667 21L21.5735 41.0931L17.9207 37.4403L31.7777 23.5833H0.333344V18.4166H31.7777Z',
-            autoWidth: true,
-            classes: {
-              arrows:
-                'splide__arrows flex gap-5 mb-10 flex justify-center gap-2',
-              arrow: 'splide__arrow shadow-md rounded small_btn p-4',
-              prev: 'splide__arrow--prev ',
-              next: 'splide__arrow--next ',
-            },
-            focus: 'center',
-            breakpoints: {
-              640: {
-                perPage: 2,
-                gap: '.7rem',
-              },
-              480: {
-                perPage: 3,
-                gap: '.7rem',
-                type: 'loop',
-              },
-            },
-          }"
-        >
-          <SplideSlide v-for="(img, index) in carousel" :key="index">
-            <div
-              class="slide_contain carou border rounded bg-white shadow-lg p-4"
-            >
-              <!-- {{ img.img }} -->
-              <q-img :src="img.img" class="shadow-lg slide-img rounded" />
+    <section class="projects-section">
+      <div class="projects-wrap ocp side container">
+        <div class="right">
+          <div class="image-grid">
+            <div class="image-row">
+              <div class="image image-01">
+                <img src="~/assets/img/ocp1.jpg" alt="" />
+              </div>
+              <div class="image image-02">
+                <img src="~/assets/img/ocp2.jpg" alt="" />
+              </div>
+              <div class="image image-03">
+                <img src="~/assets/img/ocp3.jpg" alt="" />
+              </div>
             </div>
-          </SplideSlide>
-        </Splide>
+            <div class="image-row">
+              <div class="image image-04">
+                <img src="~/assets/img/ocp4.jpg" alt="" />
+              </div>
+              <div class="image image-05">
+                <img src="~/assets/img/ocp5.jpg" alt="" />
+              </div>
+              <div class="image image-06">
+                <img src="~/assets/img/ocp5.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="left">
+          <h2
+            class="text-h5 text-md-h4 font-weight-light pt-8 grey--text text--darken-3"
+          >
+            OCP AFRICA AND PALM ALLEY & AGROLOG
+          </h2>
+          <p
+            class="grey--text text--darken-3 text-body-1 text-md-h6 font-weight-light"
+          >
+            Palm Valley Nigeria Limited partners with OCP Africa and Agrolog
+            Limited on an Agribooster initiative aimed at revolutionizing ginger
+            farming in Kachia, Kaduna state. This strategic alliance marries OCP
+            Fertilizers' expertise in cutting-edge agricultural solutions with
+            Palm Valley's unwavering commitment to community empowerment, and
+            Agrolog's dedication to sustainable farming practices. The
+            collective mission is singular and resolute: to elevate the
+            productivity and quality of ginger farming, enhance the lives of
+            local farmers, and champion the adoption of environmentally
+            sustainable agricultural methodologies. With a shared vision for a
+            thriving, sustainable agricultural landscape, this partnership
+            aspires to spark a transformative wave in Kachia, Kaduna, and
+            beyond.
+          </p>
+        </div>
       </div>
     </section>
+    <section class="projects-section">
+      <div class="projects-wrap agra container">
+        <div class="left">
+          <h2
+            class="text-h5 text-md-h4 font-weight-light pt-8 grey--text text--darken-3"
+          >
+            AGRA
+          </h2>
+          <p
+            class="grey--text text--darken-3 text-body-1 text-md-h6 font-weight-light"
+          >
+            Palm Valley Nigeria Limited in partnership with Alliance for a Green
+            Revolution in Africa (AGRA) embarks on an Inclusive Agricultural
+            Transformation Project to increase household incomes, financial
+            inclusion, food security and resilience for 50,000 smallholder women
+            and youths in Kaduna and Niger State, Nigeria. Specific objectives
+            include; Increase productivity for women smallholder farmers in
+            Niger and Kaduna States, Strengthened and expanded women"s access to
+            output markets and Increased capacity of small holder farming
+            households and agricultural systems to better prepare for and adapt
+            to shocks and stress.
+          </p>
+        </div>
+        <div class="right">
+          <div class="image-grid">
+            <div class="image-row">
+              <div class="image image-01">
+                <img src="~/assets/img/agra1.jpg" alt="" />
+              </div>
+              <div class="image image-02">
+                <img src="~/assets/img/agra2.jpg" alt="" />
+              </div>
+              <div class="image image-03">
+                <img src="~/assets/img/agra3.jpg" alt="" />
+              </div>
+            </div>
+            <div class="image-row">
+              <div class="image image-04">
+                <img src="~/assets/img/agra4.jpg" alt="" />
+              </div>
+              <div class="image image-05">
+                <img src="~/assets/img/agra5.jpg" alt="" />
+              </div>
+              <div class="image image-06">
+                <img src="~/assets/img/agra6.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="projects-section">
       <div class="partnerr training">
         <Splide
@@ -1140,7 +936,7 @@
           :options="{
             padding: '5rem',
             gap: '2rem',
-
+            autoplay: true,
             arrowPath:
               'M31.7777 18.4166L17.9207 4.55963L21.5735 0.906799L41.6667 21L21.5735 41.0931L17.9207 37.4403L31.7777 23.5833H0.333344V18.4166H31.7777Z',
             autoWidth: true,
@@ -1307,6 +1103,7 @@ const images = reactive([
   },
 ]);
 const index = ref(0);
+const slide = ref(1);
 const bigImg = ref(images[index.value]);
 const changeImage = (val) => {
   bigImg.value = images[val];
@@ -1860,6 +1657,10 @@ img {
   }
   .training .partner {
     min-height: 350px !important;
+  }
+  h1.text-5xl {
+    font-size: 2rem !important;
+    line-height: 1;
   }
 }
 
