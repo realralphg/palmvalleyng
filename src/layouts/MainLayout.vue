@@ -10,9 +10,7 @@
           <q-avatar class="bg-transparent w-12 h-12">
             <img src="../assets/img/palm_logo.png" />
           </q-avatar>
-          <p class="hidden sm:block text-white poppins text-lg">
-            Palm Valley Ng
-          </p>
+          <p class="sm:block text-white poppins text-lg">Palm Valley Ng</p>
         </div>
 
         <nav class="desktop_nav">
@@ -201,7 +199,13 @@
                   />
                 </svg>
               </div>
-              <span class="px-2">+234 8035888719, +234 8037864289</span>
+              <span class="px-2 row items-center">
+                <a target="_blank" href="tel:+2348035888719">+234 8035888719</a>
+                ,
+                <a class="q-ml-xs" target="_blank" href="tel:+2348037864289"
+                  >+234 8037864289</a
+                ></span
+              >
             </li>
             <li class="flex mb-4 items-center">
               <div>
@@ -220,11 +224,19 @@
                   />
                 </svg>
               </div>
-              <span class="px-2">palmvalleyng@gmail.com</span>
+              <span class="px-2"
+                ><a target="_blank" href="mailto:palmvalleyng@gmail.com"
+                  >palmvalleyng@gmail.com</a
+                >
+              </span>
             </li>
             <li class="flex mb-4">
               <div>
-                <a class="text-white text-center" href="" target="_blank">
+                <a
+                  class="text-white text-center"
+                  href="https://www.facebook.com/palmvalleyng"
+                  target="_blank"
+                >
                   <i
                     style="font-size: 2em"
                     class="ri-facebook-fill px-2 text-yellow"
@@ -236,14 +248,22 @@
                   /> -->
                 </a>
 
-                <a class="text-white text-center" href="" target="_blank">
+                <a
+                  class="text-white text-center"
+                  href="https://www.linkedin.com/company/palmvalleyng/"
+                  target="_blank"
+                >
                   <i
                     style="font-size: 2em"
                     class="ri-linkedin-fill px-2 text-yellow"
                   ></i>
                 </a>
 
-                <a class="text-white text-center" href="" target="_blank">
+                <a
+                  class="text-white text-center"
+                  href="https://twitter.com/palmvalleyng"
+                  target="_blank"
+                >
                   <i
                     style="font-size: 2em"
                     class="ri-twitter-fill px-2 text-yellow"

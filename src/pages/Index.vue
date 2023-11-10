@@ -22,35 +22,82 @@
         class="container carouText text-center text-h5 text-weight-bold q-pb-md"
       >
         <div>
-          Strategically enhance agricultural productivity and provide increased
-          access to credit and markets for women and smallholder farmers in
-          Nigerian rural communities.
+          <h1 class="text-3xl poppins mb-4 font-extrabold">
+            Palm Valley Nigeria <span class="text-green poppins">Limited</span>
+          </h1>
+          <div>
+            Strategically enhancing agricultural productivity and providing
+            increased access to credit and markets for women and smallholder
+            farmers in Nigerian rural communities.
+          </div>
         </div>
       </div>
     </div>
-    <div class="curved_green_bg">
-      <div class="wrapper trips">
-        <div class="text-center flex flex-col justify-center items-center">
-          <p
-            class="text-2xl text-white relative poppins mb-4 under_after font-semibold"
+
+    <section class="projects-section">
+      <div class="projects-wrap wofan container">
+        <div class="left">
+          <h2
+            class="text-h5 text-md-h4 font-weight-light pt-8 grey--text text--darken-3"
           >
-            PVNL-AGRA Agricultural Transformation Project
-          </p>
-          <p class="text-white text-lg my-2 max-w-8xl">
-            Palm Valley in partnership with Alliance for a Green Revolution in
-            Africa (AGRA) embarks on an Inclusive Agricultural Transformation
-            Project to increase household incomes, financial inclusion, food
-            security and resilience for 50,000 smallholder women and youths in
-            Kaduna and Niger State, Nigeria.
+            <span class="text-green poppins">WOFAN</span>
+            <span class="text-red-14">
+              ICON<span class="text-orange-10">2</span>
+            </span>
+            PROJECT
+          </h2>
+          <p
+            class="grey--text text--darken-3 text-body-1 text-md-h6 font-weight-light"
+          >
+            The Women Farmers Advancement Network (WOFAN) in collaboration with
+            Palm Valley Nigeria Limited is implementing the WOFAN ICON2 project
+            powered by Mastercard Foundation. The project is strategically
+            designed to drive sustainable agricultural growth and economic
+            development in Benue, Nasarawa, and Kaduna States in Nigeria. ICON2
+            aims to strengthen agricultural enterprise value chains, generate
+            employment opportunities, and enhance income for women and youth
+            farmers and processors. With a focus on fostering a positive
+            perception of agriculture as a viable source of income, the project
+            seeks to improve access to financial products and services for
+            individual farmers through cooperative structures.
           </p>
         </div>
-        <div>
+        <div class="right">
+          <div class="image-grid">
+            <div class="image-row">
+              <div class="image image-01">
+                <img src="~/assets/img/wof1.jpg" alt="" />
+              </div>
+              <!-- <div class="image image-02">
+                <img src="~/assets/img/wof2.jpg" alt="" />
+              </div> -->
+              <div class="image image-03">
+                <img src="~/assets/img/wof3.jpg" alt="" />
+              </div>
+            </div>
+            <div class="image-row">
+              <div class="image image-04">
+                <img src="~/assets/img/wof4.jpg" alt="" />
+              </div>
+              <div class="image image-05">
+                <img src="~/assets/img/wof5.jpg" alt="" />
+              </div>
+              <div class="image image-06">
+                <img src="~/assets/img/wof6.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="projects-section curved_green_bg">
+        <div class="partnerr training">
           <Splide
             :options="{
-              autoplay: true,
-              rewind: true,
               padding: '5rem',
               gap: '2rem',
+              autoplay: true,
+
               arrowPath:
                 'M31.7777 18.4166L17.9207 4.55963L21.5735 0.906799L41.6667 21L21.5735 41.0931L17.9207 37.4403L31.7777 23.5833H0.333344V18.4166H31.7777Z',
               autoWidth: true,
@@ -76,168 +123,126 @@
             }"
           >
             <SplideSlide>
-              <div
-                class="slide_contain slider_height border rounded bg-white shadow-lg p-4"
-              >
-                <q-img
-                  src="/img/sm1.jpeg"
-                  class="shadow-lg slide-img rounded"
-                />
-                <div class="details_container my-4">
-                  <p class="font-semibold text-lg">
-                    Palm Valley's End of Season Training on Harvest and Post
-                    Harvest Processing for Quality Ginger in Kaduna.
-                  </p>
-                </div>
-              </div>
-            </SplideSlide>
-            <SplideSlide>
-              <div
-                class="slide_contain slider_height border rounded bg-white shadow-lg p-4"
-              >
-                <q-img
-                  src="/img/sm2.jpeg"
-                  class="shadow-lg slide-img rounded"
-                />
-                <div class="details_container my-4">
-                  <p class="font-semibold q-mb-md text-lg">
-                    Training of Sales and Marketing Ambassadors on Market
-                    Prospecting.
-                  </p>
+              <div class="partner slide_container slider_height">
+                <div class="women"><img src="/img/s1.jpg" alt="" /></div>
 
-                  <a
-                    class="q-pa-sm bg-green text-white q-mt-md"
-                    target="_blank"
-                    href="https://www.instagram.com/p/Ck-tdmVtPyF/"
-                    >Read more</a
-                  >
-                </div>
+                <h4 class="text-h6 text-weight-bold">
+                  Mbakukwa Youth Development
+                </h4>
+                <p>
+                  Mbakukwa Youth Development Association Cooperative
+                  Transplanting in their Demo Farm Plot
+                </p>
               </div>
             </SplideSlide>
             <SplideSlide>
-              <div
-                class="slide_contain slider_height border rounded bg-white shadow-lg p-4"
-              >
-                <q-img
-                  src="/img/sm2.jpeg"
-                  class="shadow-lg slide-img rounded"
-                />
-                <div class="details_container my-4">
-                  <p class="font-semibold q-mb-md text-lg">
-                    AGRA Gender Consortium Pre and Post-Harvest Training of
-                    Trainers and Brown Field Day.
-                  </p>
+              <div class="partner slide_container slider_height">
+                <div class="women"><img src="/img/s2.jpg" alt="" /></div>
 
-                  <a
-                    class="q-pa-sm bg-green text-white q-mt-md"
-                    target="_blank"
-                    href="https://www.instagram.com/p/Ck76vj-NeW3/"
-                    >Read more</a
-                  >
-                </div>
+                <h4 class="text-h6 text-weight-bold">Farmers Field Day</h4>
+                <p>Farmers Field Day at Zonkwa, Zangon Kataf</p>
               </div>
             </SplideSlide>
             <SplideSlide>
-              <div
-                class="slide_contain slider_height border rounded bg-white shadow-lg p-4"
-              >
-                <q-img
-                  src="/img/palm11.jpeg"
-                  class="shadow-lg slide-img rounded"
-                />
-                <div class="details_container my-4">
-                  <p class="font-semibold text-lg">
-                    Seeds on wheels project with East west seeds
-                  </p>
-                </div>
-              </div>
-            </SplideSlide>
+              <div class="partner slide_container slider_height">
+                <div class="women"><img src="/img/s3.jpg" alt="" /></div>
 
-            <SplideSlide>
-              <div
-                class="slide_contain border slider_height rounded bg-white shadow-lg p-4"
-              >
-                <q-img
-                  src="/img/palm33.jpeg"
-                  class="shadow-lg slide-img rounded"
-                />
-                <div class="details_container my-4">
-                  <p class="font-semibold text-lg">
-                    Farmers Greenfield day at ginger Demo Plot in kachia
-                  </p>
-                </div>
+                <h4 class="text-h6 text-weight-bold">Farmers Field Day</h4>
+                <p>
+                  Farmers Field Day at Manchok, Kaura, to expose community
+                  partners to new tehnologies in rice production
+                </p>
               </div>
             </SplideSlide>
             <SplideSlide>
-              <div class="slide_contain border rounded bg-white shadow-lg p-4">
-                <q-img
-                  src="/img/palm55.jpeg"
-                  class="shadow-lg slide-img rounded"
-                />
-                <div class="details_container my-4">
-                  <p class="font-semibold text-lg">
-                    The inauguration of the ocp ultra modern fertilizer blending
-                    plant and center of excellence.
-                  </p>
-                </div>
+              <div class="partner slide_container slider_height">
+                <div class="women"><img src="/img/s4.jpg" alt="" /></div>
+
+                <h4 class="text-h6 text-weight-bold">Farmers Field Day</h4>
+                <p>
+                  Farmers Field Day at Manchok, Kaura, to expose community
+                  partners to new tehnologies in rice production
+                </p>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div class="partner slide_container slider_height">
+                <div class="women"><img src="/img/sfive.jpg" alt="" /></div>
+
+                <h4 class="text-h6 text-weight-bold">
+                  Market Linkage training
+                </h4>
+                <p>
+                  Market Linkage training on negotiation, marketing and pricing
+                  skills in Kaduna state
+                </p>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div class="partner slide_container slider_height">
+                <div class="women"><img src="/img/sSix.jpg" alt="" /></div>
+
+                <h4 class="text-h6 text-weight-bold">
+                  Market Linkage training
+                </h4>
+                <p>
+                  Market Linkage training on negotiation, marketing and pricing
+                  skills in Benue state
+                </p>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div class="partner slide_container slider_height">
+                <div class="women"><img src="/img/s7.jpg" alt="" /></div>
+
+                <h4 class="text-h6 text-weight-bold">
+                  Market Linkage training
+                </h4>
+                <p>
+                  Market Linkage training on negotiation, marketing and pricing
+                  skills in Nasarawa state
+                </p>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div class="partner slide_container slider_height">
+                <div class="women"><img src="/img/harvest1.jpeg" alt="" /></div>
+
+                <h4 class="text-h6 text-weight-bold">Farmers Harvest</h4>
+                <p>
+                  Farmers joyfully harvesting their rice produce after a
+                  bountiful yield as a result of good agronomic practice which
+                  is a key deliverable of the WOFAN ICON2 Project.
+                </p>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div class="partner slide_container slider_height">
+                <div class="women"><img src="/img/harvest2.jpeg" alt="" /></div>
+
+                <h4 class="text-h6 text-weight-bold">Farmers Harvest</h4>
+                <p>
+                  Farmers joyfully harvesting their rice produce after a
+                  bountiful yield as a result of good agronomic practice which
+                  is a key deliverable of the WOFAN ICON2 Project.
+                </p>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div class="partner slide_container slider_height">
+                <div class="women"><img src="/img/harvest1.jpeg" alt="" /></div>
+
+                <h4 class="text-h6 text-weight-bold">Farmers Harvest</h4>
+                <p>
+                  Farmers joyfully harvesting their rice produce after a
+                  bountiful yield as a result of good agronomic practice which
+                  is a key deliverable of the WOFAN ICON2 Project.
+                </p>
               </div>
             </SplideSlide>
           </Splide>
         </div>
-      </div>
-    </div>
-
-    <section class="projects-section">
-      <div class="projects-wrap wofan container">
-        <div class="left">
-          <h2
-            class="text-h5 text-md-h4 font-weight-light pt-8 grey--text text--darken-3"
-          >
-            WOFAN ICON2 PROJECT
-          </h2>
-          <p
-            class="grey--text text--darken-3 text-body-1 text-md-h6 font-weight-light"
-          >
-            The Women Farmers Advancement Network (WOFAN) in collaboration with
-            Palm Valley Nigeria Limited is implementing the WOFAN ICON2 project
-            powered by Mastercard Foundation. The project is strategically
-            designed to drive sustainable agricultural growth and economic
-            development in Benue, Nasarawa, and Kaduna States in Nigeria. ICON2
-            aims to strengthen agricultural enterprise value chains, generate
-            employment opportunities, and enhance income for women and youth
-            farmers and processors. With a focus on fostering a positive
-            perception of agriculture as a viable source of income, the project
-            seeks to improve access to financial products and services for
-            individual farmers through cooperative structures.
-          </p>
-        </div>
-        <div class="right">
-          <div class="image-grid">
-            <div class="image-row">
-              <div class="image image-01">
-                <img src="~/assets/img/wof1.jpg" alt="" />
-              </div>
-              <div class="image image-02">
-                <img src="~/assets/img/wof2.jpg" alt="" />
-              </div>
-              <div class="image image-03">
-                <img src="~/assets/img/wof3.jpg" alt="" />
-              </div>
-            </div>
-            <div class="image-row">
-              <div class="image image-04">
-                <img src="~/assets/img/wof4.jpg" alt="" />
-              </div>
-              <div class="image image-05">
-                <img src="~/assets/img/wof5.jpg" alt="" />
-              </div>
-              <div class="image image-06">
-                <img src="~/assets/img/wof6.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
     </section>
 
     <section class="projects-section">
@@ -259,9 +264,9 @@
               <div class="image image-04">
                 <img src="~/assets/img/ocp4.jpg" alt="" />
               </div>
-              <div class="image image-05">
+              <!-- <div class="image image-05">
                 <img src="~/assets/img/ocp5.jpg" alt="" />
-              </div>
+              </div> -->
               <div class="image image-06">
                 <img src="~/assets/img/ocp5.jpg" alt="" />
               </div>
@@ -324,7 +329,7 @@
                 <img src="~/assets/img/agra1.jpg" alt="" />
               </div>
               <div class="image image-02">
-                <img src="~/assets/img/agra2.jpg" alt="" />
+                <img src="~/assets/img/agra5.jpg" alt="" />
               </div>
               <div class="image image-03">
                 <img src="~/assets/img/agra3.jpg" alt="" />
@@ -335,8 +340,9 @@
                 <img src="~/assets/img/agra4.jpg" alt="" />
               </div>
               <div class="image image-05">
-                <img src="~/assets/img/agra5.jpg" alt="" />
+                <img src="~/assets/img/agra2.jpg" alt="" />
               </div>
+
               <div class="image image-06">
                 <img src="~/assets/img/agra6.jpg" alt="" />
               </div>
@@ -345,111 +351,168 @@
         </div>
       </div>
     </section>
-
-    <section class="projects-section">
-      <div class="partnerr training">
-        <Splide
-          :options="{
-            padding: '5rem',
-            gap: '2rem',
-            autoplay: true,
-
-            arrowPath:
-              'M31.7777 18.4166L17.9207 4.55963L21.5735 0.906799L41.6667 21L21.5735 41.0931L17.9207 37.4403L31.7777 23.5833H0.333344V18.4166H31.7777Z',
-            autoWidth: true,
-            classes: {
-              arrows:
-                'splide__arrows flex gap-5 mb-10 flex justify-center gap-2',
-              arrow: 'splide__arrow shadow-md rounded small_btn p-4',
-              prev: 'splide__arrow--prev ',
-              next: 'splide__arrow--next ',
-            },
-            focus: 'center',
-            breakpoints: {
-              640: {
-                perPage: 2,
-                gap: '.7rem',
+    <div class="curved_green_bg">
+      <div class="wrapper trips">
+        <div class="text-center flex flex-col justify-center items-center">
+          <p
+            class="text-2xl text-white relative poppins mb-4 under_after font-semibold"
+          >
+            PVNL-AGRA Agricultural Transformation Project
+          </p>
+          <p class="text-white text-lg my-2 max-w-8xl">
+            Palm Valley in partnership with Alliance for a Green Revolution in
+            Africa (AGRA) embarks on an Inclusive Agricultural Transformation
+            Project to increase household incomes, financial inclusion, food
+            security and resilience for 50,000 smallholder women and youths in
+            Kaduna and Niger State, Nigeria.
+          </p>
+        </div>
+        <div>
+          <Splide
+            :options="{
+              autoplay: true,
+              rewind: true,
+              padding: '5rem',
+              gap: '2rem',
+              arrowPath:
+                'M31.7777 18.4166L17.9207 4.55963L21.5735 0.906799L41.6667 21L21.5735 41.0931L17.9207 37.4403L31.7777 23.5833H0.333344V18.4166H31.7777Z',
+              autoWidth: true,
+              classes: {
+                arrows:
+                  'splide__arrows flex gap-5 mb-10 flex justify-center gap-2',
+                arrow: 'splide__arrow shadow-md rounded small_btn p-4',
+                prev: 'splide__arrow--prev ',
+                next: 'splide__arrow--next ',
               },
-              480: {
-                perPage: 3,
-                gap: '.7rem',
-                type: 'loop',
+              focus: 'center',
+              breakpoints: {
+                640: {
+                  perPage: 2,
+                  gap: '.7rem',
+                },
+                480: {
+                  perPage: 3,
+                  gap: '.7rem',
+                  type: 'loop',
+                },
               },
-            },
-          }"
-        >
-          <SplideSlide>
-            <div class="partner slide_container slider_height">
-              <div class="women"><img src="/img/s1.jpg" alt="" /></div>
+            }"
+          >
+            <SplideSlide>
+              <div
+                class="slide_contain slider_height border rounded bg-white shadow-lg p-4"
+              >
+                <q-img
+                  src="/img/sm1.jpeg"
+                  class="shadow-lg slide-img rounded"
+                />
+                <div class="details_container my-4">
+                  <h4 class="font-semibold text-lg">Training</h4>
+                  <p>
+                    Palm Valley's End of Season Training on Harvest and Post
+                    Harvest Processing for Quality Ginger in Kaduna.
+                  </p>
+                </div>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div
+                class="slide_contain slider_height border rounded bg-white shadow-lg p-4"
+              >
+                <q-img
+                  src="/img/sm2.jpeg"
+                  class="shadow-lg slide-img rounded"
+                />
+                <div class="details_container my-4">
+                  <h4 class="font-semibold text-lg">Training</h4>
+                  <p>
+                    Training of Sales and Marketing Ambassadors on Market
+                    Prospecting.
+                  </p>
 
-              <h4 class="text-h6 text-weight-bold">
-                Mbakukwa Youth Development Association Cooperative Transplanting
-                in their Demo Farm Plot
-              </h4>
-            </div>
-          </SplideSlide>
-          <SplideSlide>
-            <div class="partner slide_container slider_height">
-              <div class="women"><img src="/img/s2.jpg" alt="" /></div>
+                  <a
+                    class="q-pa-sm bg-green text-white q-mt-md"
+                    target="_blank"
+                    href="https://www.instagram.com/p/Ck-tdmVtPyF/"
+                    >Read more</a
+                  >
+                </div>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div
+                class="slide_contain slider_height border rounded bg-white shadow-lg p-4"
+              >
+                <q-img
+                  src="/img/agra6.jpg"
+                  class="shadow-lg slide-img rounded"
+                />
+                <div class="details_container my-4">
+                  <h4 class="font-semibold text-lg">AGRA Gender Consortium</h4>
 
-              <h4 class="text-h6 text-weight-bold">
-                Farmers Field Day at Zonkwa, Zangon Kataf
-              </h4>
-            </div>
-          </SplideSlide>
-          <SplideSlide>
-            <div class="partner slide_container slider_height">
-              <div class="women"><img src="/img/s3.jpg" alt="" /></div>
+                  <p>
+                    AGRA Gender Consortium Pre and Post-Harvest Training of
+                    Trainers and Brown Field Day.
+                  </p>
 
-              <h4 class="text-h6 text-weight-bold">
-                Farmers Field Day at Manchok, Kaura, to expose community
-                partners to new tehnologies in rice production
-              </h4>
-            </div>
-          </SplideSlide>
-          <SplideSlide>
-            <div class="partner slide_container slider_height">
-              <div class="women"><img src="/img/s4.jpg" alt="" /></div>
+                  <a
+                    class="q-pa-sm bg-green text-white q-mt-md"
+                    target="_blank"
+                    href="https://www.instagram.com/p/Ck76vj-NeW3/"
+                    >Read more</a
+                  >
+                </div>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div
+                class="slide_contain slider_height border rounded bg-white shadow-lg p-4"
+              >
+                <q-img
+                  src="/img/palm11.jpeg"
+                  class="shadow-lg slide-img rounded"
+                />
+                <div class="details_container my-4">
+                  <h4 class="font-semibold text-lg">Project</h4>
+                  <p>Seeds on wheels project with East west seeds</p>
+                </div>
+              </div>
+            </SplideSlide>
 
-              <h4 class="text-h6 text-weight-bold">
-                Farmers Field Day at Manchok, Kaura, to expose community
-                partners to new tehnologies in rice production
-              </h4>
-            </div>
-          </SplideSlide>
-          <SplideSlide>
-            <div class="partner slide_container slider_height">
-              <div class="women"><img src="/img/sfive.jpg" alt="" /></div>
-
-              <h4 class="text-h6 text-weight-bold">
-                Market Linkage training on negotiation, marketing and pricing
-                skills in Kaduna state
-              </h4>
-            </div>
-          </SplideSlide>
-          <SplideSlide>
-            <div class="partner slide_container slider_height">
-              <div class="women"><img src="/img/sSix.jpg" alt="" /></div>
-
-              <h4 class="text-h6 text-weight-bold">
-                Market Linkage training on negotiation, marketing and pricing
-                skills in Benue state
-              </h4>
-            </div>
-          </SplideSlide>
-          <SplideSlide>
-            <div class="partner slide_container slider_height">
-              <div class="women"><img src="/img/s7.jpg" alt="" /></div>
-
-              <h4 class="text-h6 text-weight-bold">
-                Market Linkage training on negotiation, marketing and pricing
-                skills in Nasarawa state
-              </h4>
-            </div>
-          </SplideSlide>
-        </Splide>
+            <SplideSlide>
+              <div
+                class="slide_contain border slider_height rounded bg-white shadow-lg p-4"
+              >
+                <q-img
+                  src="/img/palm33.jpeg"
+                  class="shadow-lg slide-img rounded"
+                />
+                <div class="details_container my-4">
+                  <h4 class="font-semibold text-lg">Farmers Greenfield day</h4>
+                  <p>Farmers Greenfield day at ginger Demo Plot in kachia</p>
+                </div>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div class="slide_contain border rounded bg-white shadow-lg p-4">
+                <q-img
+                  src="/img/palm55.jpeg"
+                  class="shadow-lg slide-img rounded"
+                />
+                <div class="details_container my-4">
+                  <h4 class="font-semibold text-lg">Inauguration</h4>
+                  <p>
+                    The inauguration of the OCP ultra modern fertilizer blending
+                    plant and center of excellence.
+                  </p>
+                </div>
+              </div>
+            </SplideSlide>
+          </Splide>
+        </div>
       </div>
-    </section>
+    </div>
+
     <div class="world_bg">
       <div
         class="wrapper flex gap-10 py-10 justify-evenly items-center flex-wrap"
@@ -967,7 +1030,7 @@
         </Splide>
       </div>
     </div>
-    <!-- <div class="blog_container mb-20">
+    <div class="blog_container my-20">
       <div class="wrapper">
         <div
           class="flex flex-col justify-center text-center items-center mb-10 my-4"
@@ -977,10 +1040,10 @@
           >
             Blog and Update
           </p>
-          <p class="max-w-lg">
+          <!-- <p class="max-w-lg">
             orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempory
-          </p>
+          </p> -->
         </div>
         <Splide
           :options="{
@@ -1016,7 +1079,7 @@
           </SplideSlide>
         </Splide>
       </div>
-    </div> -->
+    </div>
     <div class="bg_btn py-6">
       <div class="wrapper">
         <div class="max-w-2xl my-4 mx-auto tex-center">
@@ -1033,6 +1096,7 @@
         <Form />
       </div>
     </div>
+
     <!-- <div class="wrapper">
       <div>
         <div
@@ -1129,25 +1193,31 @@ const switchImg = (index) => {
 };
 const blogs = ref([
   {
-    img: "/img/blog/img1.png",
-    date: "12 October,2021",
-    desc: "Africa Agriculture Pioneer Wins 2017 World Food Prize.",
+    img: "https://cdn.vanguardngr.com/wp-content/uploads/2022/07/images-54.jpeg?width=350&auto_optimize=medium",
+    date: "12 July,2022",
+    desc: "We must fight climate change with climate-smart agriculture to sustain food system — Dr Maigari",
+    viewMore:
+      "https://www.vanguardngr.com/2022/07/we-must-fight-climate-change-with-climate-smart-agriculture-to-sustain-food-system-dr-maigari/",
   },
   {
-    img: "/img/blog/img2.png",
-    date: "12 October,2021",
-    desc: "Why a New Potato Variety could be a Game-Changer For...",
+    img: "https://leadership.ng/wp-content/uploads/2022/07/Nigerian-AgriBusiness-Group-NABG-1.jpg",
+    date: "12 October,2023",
+    desc: "NABG, Others To Deploy Climate-smart Agriculture To Fight Poverty",
+    viewMore:
+      "https://leadership.ng/nabg-others-to-deploy-climate-smart-agriculture-to-fight-poverty/",
   },
   {
-    img: "/img/blog/img3.png",
-    date: "12 October,2021",
-    desc: "High-tech farming in Canada...",
+    img: "https://guardian.ng/wp-content/uploads/2020/07/shutterstock_1106271755-800x450.jpg",
+    date: "10 October,2023",
+    desc: "NABG to deploy climate smart agric techniques in food production",
+    viewMore:
+      "https://guardian.ng/business-services/nabg-to-deploy-climate-smart-agric-techniques-in-food-production/",
   },
-  {
-    img: "/img/blog/img4.png",
-    date: "12 October,2021",
-    desc: "High-tech farming in Canada...",
-  },
+  // {
+  //   img: "/img/blog/img4.png",
+  //   date: "12 October,2021",
+  //   desc: "High-tech farming in Canada...",
+  // },
 ]);
 const carousel = ref([
   {
@@ -1271,9 +1341,12 @@ const testimonies = ref([
     font-size: 18px !important;
     line-height: 1.2;
   }
+  p {
+    line-height: 1.2;
+  }
 
   .partner {
-    min-height: 400px !important;
+    min-height: 380px !important;
   }
 }
 
@@ -1293,10 +1366,20 @@ const testimonies = ref([
   width: 25em;
 }
 
+.details_container {
+  p {
+    line-height: 1.2;
+  }
+  h4 {
+    text-transform: capitalize;
+  }
+}
+
 .partner h4 {
   font-size: 1.5rem;
   line-height: 2rem;
-  margin: 0.75rem 0;
+  text-transform: capitalize;
+  // margin: 0.75rem 0;
 }
 .partner p {
   margin: 0.35rem 0;
@@ -1316,12 +1399,19 @@ const testimonies = ref([
   }
 }
 .slide_container {
-  min-height: 35em;
+  min-height: 30em;
   width: 25em;
 }
 .slide_contain {
-  min-height: 28em;
+  min-height: 27em;
+  position: relative;
   width: 25em;
+  a {
+    display: inline-block;
+    position: absolute;
+    bottom: 4%;
+    left: 2%;
+  }
 }
 .slide_contain.carou {
   min-height: auto;
